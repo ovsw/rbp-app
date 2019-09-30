@@ -12,11 +12,12 @@
     "@sanity/components",
     "@sanity/default-layout",
     "@sanity/default-login",
-    "@sanity/dashboard",
     "@sanity/desk-tool",
+    "@sanity/dashboard",
     "dashboard-widget-structure-menu",
     "dashboard-widget-document-list",
-    "dashboard-widget-netlify"
+    "dashboard-widget-netlify",
+    "table"
   ],
   "parts": [
     {
