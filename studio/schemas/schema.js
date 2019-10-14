@@ -19,6 +19,7 @@ import mainImage from './objects/mainImage'
 import authorReference from './objects/authorReference'
 import youtube from './objects/youtube'
 import mytable from './objects/myTable'
+import iframeEmbed from './objects/iframeEmbed'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -40,6 +41,7 @@ export default createSchema({
     bioPortableText,
     excerptPortableText,
     youtube,
+    iframeEmbed,
     mytable
 
     // When added to this list, object types can be used as

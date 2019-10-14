@@ -54,6 +54,9 @@ export default {
     },
     {
       type: 'mytable'
+    },
+    {
+      type: 'iframeEmbed'
     }
   ]
 }

@@ -33,6 +33,12 @@ export default {
       type: 'string'
     },
     {
+      name: 'longTitle',
+      title: 'Long Title (optional)',
+      type: 'string',
+      description: 'This is the main heading of the page. If left empty, the "Title" field above will be used instead.'
+    },
+    {
       name: 'slug',
       type: 'slug',
       title: 'Slug',
