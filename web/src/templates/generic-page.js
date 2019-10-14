@@ -4,6 +4,7 @@ import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
+import GenericPage from '../components/generic-page'
 
 // import {toPlainText} from '../lib/helpers'
 
@@ -21,7 +22,7 @@ const GenericPageTemplate = props => {
           <GraphQLErrorList errors={errors} />
         </Container>
       )}
-      {page.title} - {location.pathname}
+      <GenericPage {...page} />
     </Layout>
   )
 }
