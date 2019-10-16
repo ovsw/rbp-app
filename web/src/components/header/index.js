@@ -2,20 +2,25 @@ import React from 'react'
 import Icon from '../icon'
 // import {cn} from '../../lib/helpers'
 import {Link, useStaticQuery, graphql} from 'gatsby'
+
+import TopBar from './top-bar'
 import MegaMenu from './mega-menu'
+
 import tw from 'tailwind.macro'
 import styled from 'styled-components'
 import media from '../../lib/responsive'
 
 import LogoImage from '../../images/rambling-pines-logo-retina.png'
+import headerBgImage from '../../images/bg-header-tiled.png'
 
 const HeaderRoot = styled.div`
   ${tw`relative z-100`};
-  border: 1px solid red;
+  padding-bottom: 60px;
+  background: url(${headerBgImage}) repeat-x bottom left;
+  border-bottom: 2px solid gray;
 `
-const HeaderWrapperDiv = styled.div`
-  ${tw`flex my-0 mx-auto max-w-3xl p-4`};
-  ${media.sm` padding: 1.5em 1.5em;`};
+const MainNavDiv = styled.div`
+  ${tw`flex relative my-0 mx-auto max-w-xl py-4 justify-between`};
 `
 const BrandingDiv = styled.div`
   ${tw`flex-1 font-semibold`};
@@ -39,7 +44,7 @@ const ToggleNavBtn = styled.button`
 `
 const MainNav = styled.nav`
   display: ${props => props.showNav ? 'block' : 'none'};
-  ${tw`absolute bg-white text-black`};
+  ${tw`absolute text-black`};
   left:0;
   right: 0;
   top: 4.3rem;
@@ -47,10 +52,8 @@ const MainNav = styled.nav`
 
   ${media.md`
     display:block; box-shadow: none;
-    ${tw`static bg-red-lightest w-full`};
+    ${tw`static w-full`};
   `};
-
-
 `
 const MainMenuRootUl = styled.ul`
     ${tw`m-0 py-4 px-0`};
@@ -63,10 +66,10 @@ const LogoLi = styled.li`
 
   img {
     ${tw`absolute`};
-    width: 200px;
+    width: 160px;
     left: 50%;
-    margin-left: -100px;
-    top:-60px;
+    margin-left: -75px;
+    top:-65px;
   }
 `
 
@@ -100,7 +103,8 @@ const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => {
   console.log(showNav)
   return (
     <HeaderRoot>
-      <HeaderWrapperDiv>
+      <TopBar />
+      <MainNavDiv>
         <BrandingDiv>
           <Link to='/'>{siteTitle}</Link>
         </BrandingDiv>
@@ -130,7 +134,7 @@ const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => {
           </MainMenuRootUl>
 
         </MainNav>
-      </HeaderWrapperDiv>
+      </MainNavDiv>
     </HeaderRoot>
   )
 }

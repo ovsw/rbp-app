@@ -5,26 +5,31 @@ import tw from 'tailwind.macro'
 import styled from 'styled-components'
 import media from '../../../lib/responsive'
 
-// import styles from './Megamenu.module.css'
-
 const ColumnsContainer = styled.div`
-  ${tw`mx-auto flex`};
+  ${tw`mx-auto flex px-4`};
   ${media.lg`max-width: 1200px`};
   justify-content: ${props => (props.menuTitle === 'Staff' ? 'flex-end' : 'flex-start')};
   `
 const MainItemLi = styled.li`
-    ${tw`m-0`};
+    ${tw`mx-6 `};
+    border-bottom: 2px solid black;
     &>a {
-      ${tw`cursor-pointer font-bold py-6 px-8 mx-2 xl:mx-6`};
+      ${tw`cursor-pointer inline-block font-bold pt-2 pb-1 px-2 no-underline uppercase`};
+      color: #247971;
     }
   `
 const MegaMenuDiv = styled.div`
     ${tw`absolute text-left shadow-md bg-grey-darker text-white`};
-    top: 3.3rem;
+    top: 3.2rem;
+    z-index:900;
     display: ${props => props.showSubMenu ? 'block' : 'none'};
   `
 const MenuColumnUl = styled.ul`
-  ${tw`list-reset p-4 mx-4`};
+  ${tw`list-reset p-4`};
+  &:nth-child(2) {
+    border-left: 1px dashed gray;
+    ${tw`pl-6`};
+  }
   li {${tw`py-1`}};
   a {
     ${tw`text-white no-underline`};
