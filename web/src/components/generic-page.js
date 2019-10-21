@@ -5,18 +5,22 @@ import PortableText from './portableText'
 
 // import styles from './blog-post.module.css'
 
+import styled from 'styled-components'
+import tw from 'tailwind.macro'
+
+const ContainerDiv = styled.div`
+  ${tw`max-w-xl mx-auto px-4 py-px`};
+  ${tw`bg-grey-lighter`};
+`
+
 function GenericPage (props) {
   const {_rawBody, title} = props
   return (
     <>
-
-      {/* <h1>{title}</h1> */}
-      {_rawBody && <PortableText blocks={_rawBody} />}
-
-      <div className='in-blog-metabottom mt-30'>
-        {/* <span><a href='#'><i className='zmdi zmdi-favorite-outline' /> Like : 08</a> / <a href='#'><i className='zmdi zmdi-comment-outline' />Comment</a></span> */}
-      </div>
-
+      <ContainerDiv>
+        <h1>{title}</h1>
+        {_rawBody && <PortableText blocks={_rawBody} />}
+      </ContainerDiv>
     </>
   )
 }
