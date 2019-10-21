@@ -121,7 +121,7 @@ const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => {
               if (i === 2) {
                 return (
                   <>
-                    <LogoLi><img src={LogoImage} /></LogoLi>
+                    <LogoLi><Link to='/'><img src={LogoImage} /></Link></LogoLi>
                     <MegaMenu menuTitle={mainMenuItem.title} mainLink={mainMenuItem.slug} menuColumns={mainMenuItem.children} key={mainMenuItem.slug} />
                   </>
                 )
