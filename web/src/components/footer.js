@@ -11,13 +11,12 @@ import SocialLinks from './socialLinks'
 import AcaLogoImg from '../images/aca-logo.png'
 
 const FooterStyled = styled.footer`
-  ${tw`bg-red-lightest`};
+  ${tw`border-0 border-t border-solid`};
 `
 
 const FooterWrapperDiv = styled.div`
   ${tw`max-w-2xl mx-auto`};
-  ${tw`flex bg-blue-lightest`};
-  ${tw`p-4`};
+  ${tw`flex p-4`};
 
   h3 {
     ${tw`mt-0`};
@@ -25,14 +24,14 @@ const FooterWrapperDiv = styled.div`
 `
 const LeftColDiv = styled.div`
   ${tw`w-full md:w-1/2 px-4`};
-  ${tw`text-right border-solid border-1 border-0 border-r`};
+  ${tw`text-right border-solid border-0 border-r`};
 `
 const RightColDiv = styled.div`
   ${tw`w-full md:w-1/2 px-4`};
 `
 const CopyRightDiv = styled.div`
-${tw`p`};
-${tw`text-center text-sm`};
+${tw`p-2 border-0 border-t border-solid`};
+${tw`text-center text-sm bg-white`};
 `
 const PartnerLogoImage = styled.img`
   ${tw`w-48 max-w-full`};
