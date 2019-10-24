@@ -15,6 +15,7 @@ import Hero from '../components/hp-sections/hero'
 import Transportation from '../components/hp-sections/transportation'
 import Programs from '../components/hp-sections/programs'
 import LocationGmap from '../components/hp-sections/location-gmap'
+import Testimonials from '../components/hp-sections/testimonials'
 
 const IndexPage = props => {
   const {data, errors} = props
@@ -51,6 +52,7 @@ const IndexPage = props => {
       <Transportation />
       <Programs />
       <LocationGmap />
+      <Testimonials />
 
       {/* {postNodes && (
           <BlogPostPreviewList
