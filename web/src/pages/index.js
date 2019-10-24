@@ -12,7 +12,9 @@ import SEO from '../components/seo'
 import Layout from '../containers/layout'
 
 import Hero from '../components/hp-sections/hero'
+import Transportation from '../components/hp-sections/transportation'
 import Programs from '../components/hp-sections/programs'
+import LocationGmap from '../components/hp-sections/location-gmap'
 
 const IndexPage = props => {
   const {data, errors} = props
@@ -46,7 +48,10 @@ const IndexPage = props => {
         keywords={site.keywords}
       />
       <Hero />
+      <Transportation />
       <Programs />
+      <LocationGmap />
+
       {/* {postNodes && (
           <BlogPostPreviewList
             title='Latest blog posts'
