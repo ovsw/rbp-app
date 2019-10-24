@@ -100,7 +100,6 @@ const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => {
       }
     `
   )
-  console.log(showNav)
   return (
     <HeaderRoot>
       <TopBar />

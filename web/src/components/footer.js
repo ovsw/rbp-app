@@ -2,7 +2,6 @@ import React from 'react'
 
 import tw from 'tailwind.macro'
 import styled from 'styled-components'
-import media from '../lib/responsive'
 
 // components
 import SocialLinks from './socialLinks'

@@ -7,7 +7,6 @@ import '../styles/layout.css'
 
 import tw from 'tailwind.macro'
 import styled from 'styled-components'
-import media from '../lib/responsive'
 
 const LayoutWrapperDiv = styled.div`
   ${tw``};
