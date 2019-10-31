@@ -88,8 +88,8 @@ class Megamenu extends React.Component {
           showSubMenu={megaMenuVisible}
         >
           <ColumnsContainer menuTitle={menuTitle}>
-            {menuColumns.map(column => (
-              <MenuColumnUl>
+            {menuColumns.map((column, i) => (
+              <MenuColumnUl key={`column-${i}`}>
                 {column.children.map(item => (
                   <li key={item.slug}>
                     {item.slug.indexOf('https') !== 0 ? (

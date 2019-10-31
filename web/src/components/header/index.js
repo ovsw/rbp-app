@@ -119,14 +119,16 @@ const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => {
             {site.siteMetadata.siteNav.map((mainMenuItem, i) => {
               if (i === 2) {
                 return (
-                  <>
+                  <React.Fragment key={mainMenuItem.slug}>
                     <LogoLi><Link to='/'><img src={LogoImage} /></Link></LogoLi>
                     <MegaMenu menuTitle={mainMenuItem.title} mainLink={mainMenuItem.slug} menuColumns={mainMenuItem.children} key={mainMenuItem.slug} />
-                  </>
+                  </React.Fragment>
                 )
               } else {
                 return (
-                  <MegaMenu menuTitle={mainMenuItem.title} mainLink={mainMenuItem.slug} menuColumns={mainMenuItem.children} key={mainMenuItem.slug} />
+                  <React.Fragment key={mainMenuItem.slug}>
+                    <MegaMenu menuTitle={mainMenuItem.title} mainLink={mainMenuItem.slug} menuColumns={mainMenuItem.children} key={mainMenuItem.slug} />
+                  </React.Fragment>
                 )
               }
             })}
