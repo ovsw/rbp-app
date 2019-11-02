@@ -1,10 +1,10 @@
 import React from 'react'
 import {graphql} from 'gatsby'
-import {
-  mapEdgesToNodes,
-  filterOutDocsWithoutSlugs,
-  filterOutDocsPublishedInTheFuture
-} from '../lib/helpers'
+// import {
+//   mapEdgesToNodes,
+//   filterOutDocsWithoutSlugs,
+//   filterOutDocsPublishedInTheFuture
+// } from '../lib/helpers'
 // import BlogPostPreviewList from '../components/blog-post-preview-list'
 // import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
@@ -29,11 +29,11 @@ const IndexPage = props => {
   }
 
   const site = (data || {}).site
-  const postNodes = (data || {}).posts
-    ? mapEdgesToNodes(data.posts)
-      .filter(filterOutDocsWithoutSlugs)
-      .filter(filterOutDocsPublishedInTheFuture)
-    : []
+  // const postNodes = (data || {}).posts
+  //   ? mapEdgesToNodes(data.posts)
+  //     .filter(filterOutDocsWithoutSlugs)
+  //     .filter(filterOutDocsPublishedInTheFuture)
+  //   : []
 
   if (!site) {
     throw new Error(

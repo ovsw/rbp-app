@@ -1,12 +1,11 @@
 /** @jsx jsx */
 import React from 'react' // eslint-disable-line
-import {Container, jsx, Styled} from 'theme-ui'
+import {Header as ThemeHeader, Container, jsx} from 'theme-ui'
 import {Box, Flex} from '@theme-ui/components'
 
-import Icon from '../icon'
 import {Link, useStaticQuery, graphql} from 'gatsby'
-import {Header as ThemeHeader} from 'theme-ui'
 
+import Icon from '../icon'
 import TopBar from './top-bar'
 import MainNav from './main-nav'
 
