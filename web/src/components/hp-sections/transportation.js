@@ -1,13 +1,13 @@
 /** @jsx jsx */
 import React from 'react' // eslint-disable-line
-import {Container, jsx, Styled} from 'theme-ui'
+import {jsx, Styled} from 'theme-ui'
 
 // containers
 import SectionWithSidebar from '../../containers/section-with-sidebar'
 
 const TransportationSection = () => {
   return (
-    <section sx={{variant: 'sections.hpSection'}}>
+    <section sx={{variant: 'sections.hpSectionLight'}}>
       <SectionWithSidebar mainContent={<MainContent />} sidebar={<Sidebar />} />
     </section>
   )

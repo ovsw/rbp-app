@@ -506,6 +506,18 @@ export default {
       textTransform: 'uppercase',
       fontSize: '1',
       fontWeight: 'bold'
+    },
+    'programListLink': {
+      textDecoration: 'none',
+      bg: 'white',
+      display: 'block',
+      py: 2,
+      px: 3,
+      m: 2,
+      color: 'primary',
+      '& p': {
+        color: 'text'
+      }
     }
   },
   lists: {
@@ -518,6 +530,10 @@ export default {
     hpSection: {
       py: '6',
       bg: 'background'
+    },
+    hpSectionLight: {
+      py: '6',
+      bg: 'white'
     }
   }
 }
