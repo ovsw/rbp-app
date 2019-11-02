@@ -1,7 +1,7 @@
 import React from 'react'
 
 import tw from 'tailwind.macro'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 
 // components
 import SocialLinks from './socialLinks'

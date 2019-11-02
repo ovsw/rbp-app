@@ -1,25 +1,24 @@
 import React from 'react'
+
+import {Global} from '@emotion/core'
+import {Layout as ThemeLayout} from 'theme-ui'
 import Header from './header'
 import Footer from './footer'
 
-import '../styles/layout.css'
-// import styles from './layout.module.css'
-
-import tw from 'tailwind.macro'
-import styled from 'styled-components'
-
-const LayoutWrapperDiv = styled.div`
-  ${tw``};
-`
+import 'typeface-dosis'
 
 const Layout = ({children, onHideNav, onShowNav, showNav, siteTitle}) => (
-  <>
+  <ThemeLayout>
+    <Global styles={theme => ({
+      '*': {boxSizing: 'border-box'},
+      body: {margin: 0}
+    })} />
     <Header siteTitle={siteTitle} onHideNav={onHideNav} onShowNav={onShowNav} showNav={showNav} />
 
-    <LayoutWrapperDiv>{children}</LayoutWrapperDiv>
+    <div>{children}</div>
 
     <Footer />
-  </>
+  </ThemeLayout>
 )
 
 export default Layout

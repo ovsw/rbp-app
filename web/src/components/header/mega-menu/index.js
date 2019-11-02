@@ -1,44 +1,8 @@
-import React from 'react'
-import {Link} from 'gatsby'
-
-import tw from 'tailwind.macro'
-import styled from 'styled-components'
-import media from '../../../lib/responsive'
-
-const ColumnsContainer = styled.div`
-  ${tw`mx-auto flex px-4`};
-  ${media.lg`max-width: 1200px`};
-  justify-content: ${props => (props.menuTitle === 'Staff' ? 'flex-end' : 'flex-start')};
-  `
-const MainItemLi = styled.li`
-    ${tw`mx-6 `};
-    border-bottom: 2px solid black;
-    &>a {
-      ${tw`cursor-pointer inline-block font-bold pt-2 pb-1 px-2 no-underline uppercase`};
-      color: #247971;
-    }
-  `
-const MegaMenuDiv = styled.div`
-    ${tw`absolute text-left shadow-md bg-grey-darker text-white`};
-    top: 3.2rem;
-    z-index:900;
-    display: ${props => props.showSubMenu ? 'block' : 'none'};
-  `
-const MenuColumnUl = styled.ul`
-  ${tw`list-reset p-4`};
-  &:nth-child(2) {
-    border-left: 1px dashed gray;
-    ${tw`pl-6`};
-  }
-  li {${tw`py-1`}};
-  a {
-    ${tw`text-white no-underline`};
-    &:hover{
-      color: purple;
-    }
-  }
-  ul {${tw`my-0 py-0`};}
-`
+/** @jsx jsx */
+import React from 'react' // eslint-disable-line
+import {jsx} from 'theme-ui'
+import {Flex} from '@theme-ui/components'
+import NavLink from '../../../elements/nav-link'
 
 class Megamenu extends React.Component {
   constructor (props) {
@@ -71,8 +35,11 @@ class Megamenu extends React.Component {
     const {menuTitle, mainLink, menuColumns} = this.props
     const {megaMenuVisible} = this.state
     return (
-      <MainItemLi>
-        <Link
+      <li sx={{
+        mx: 4,
+        borderBottom: '2px solid black'
+      }}>
+        <NavLink sx={{variant: 'links.navMain'}}
           onTouchStart={this.toggleMegaMenu}
           onMouseEnter={this.showMenu}
           onMouseLeave={this.hideMenu}
@@ -81,44 +48,57 @@ class Megamenu extends React.Component {
           to={mainLink}
         >
           {menuTitle}
-        </Link>
-        <MegaMenuDiv
+        </NavLink>
+        <div
           onMouseEnter={this.showMenu}
           onMouseLeave={this.hideMenu}
-          showSubMenu={megaMenuVisible}
+          sx={{
+            display: megaMenuVisible ? 'block' : 'none',
+            position: 'absolute',
+            top: '3.2rem',
+            textAlign: 'left',
+            bg: 'primaryDark',
+            color: 'white',
+            zIndex: 900
+          }}
         >
-          <ColumnsContainer menuTitle={menuTitle}>
+          <Flex className='MenuColumnsContainer' menuTitle={menuTitle}>
             {menuColumns.map(column => (
-              <MenuColumnUl>
+              <ul sx={{
+                variant: 'lists.reset',
+                p: 4,
+                pt: 3,
+                '&:nth-child(2)': {
+                  borderWidth: 0,
+                  borderLeftWidth: '1px',
+                  borderStyle: 'dashed',
+                  borderLeftColor: 'gray.6',
+                  pl: 4
+                }
+              }}>
                 {column.children.map(item => (
-                  <li key={item.slug}>
-                    {item.slug.indexOf('https') !== 0 ? (
-                      <Link to={item.slug} onClick={this.onNavClick}>
-                        {item.title}
-                      </Link>
-                    ) : (
-                      <a href={item.slug} onClick={this.onNavClick} rel='noopener noreferrer' target='_blank'>
-                        {item.title}
-                      </a>
-                    )}
+                  <li key={item.slug} sx={{py: 1}}>
+                    <NavLink to={item.slug} onClick={this.onNavClick} sx={{variant: 'links.navSub'}}>
+                      {item.title}
+                    </NavLink>
                     {item.children !== undefined && item.children.length > 0 && (
                       <ul>
                         {item.children.map(child => (
                           <li key={child.slug}>
-                            <Link to={child.slug} onClick={this.onNavClick}>
+                            <NavLink to={child.slug} onClick={this.onNavClick} sx={{variant: 'links.navSub2'}}>
                               {child.title}
-                            </Link>
+                            </NavLink>
                           </li>
                         ))}
                       </ul>
                     )}
                   </li>
                 ))}
-              </MenuColumnUl>
+              </ul>
             ))}
-          </ColumnsContainer>
-        </MegaMenuDiv>
-      </MainItemLi>
+          </Flex>
+        </div>
+      </li>
     )
   }
 }

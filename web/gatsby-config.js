@@ -224,7 +224,10 @@ module.exports = {
     ]
   },
   plugins: [
-    `gatsby-plugin-styled-components`,
+    'gatsby-plugin-theme-ui',
+    'gatsby-theme-style-guide',
+    // 'gatsby-plugin-styled-components',
+    'gatsby-plugin-emotion',
     'gatsby-plugin-postcss',
     'gatsby-plugin-react-helmet',
     {
