@@ -1,11 +1,12 @@
 import {relative} from 'path'
 
 const sharedButtonStyles = {
-  'py': 2,
+  'py': 3,
   'px': 3,
   'cursor': 'pointer',
   'lineHeight': 'inherit',
-  'fontSize': '100%'
+  'fontSize': '100%',
+  textDecoration: 'none'
 }
 
 const sharedHeadingStyles = {
@@ -45,8 +46,8 @@ export default {
     'muted': '#efe9d7',
     'primaryLight': '#4cb0af',
     'primaryDark': '#005354',
+    'primaryHover': '#005354',
     'textMuted': '#8b8a90',
-    'primaryHover': '#2c5282',
     // 'success': '#9ae6b4', // green
     // 'info': '#63b3ed', // blue
     // 'warning': '#faf089', //  yellow
@@ -311,6 +312,7 @@ export default {
     },
     'pill': {
       ...sharedButtonStyles,
+      px: 3,
       'backgroundColor': 'primary',
       'border': 'none',
       'color': 'white',
@@ -510,6 +512,12 @@ export default {
     reset: {
       listStyle: 'none',
       padding: 0
+    }
+  },
+  sections: {
+    hpSection: {
+      py: '6',
+      bg: 'background'
     }
   }
 }
