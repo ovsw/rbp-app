@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React from 'react' // eslint-disable-line
 import {jsx, Styled, Container} from 'theme-ui'
-// import {Box, Flex} from '@theme-ui/components'
+import {Box, Flex} from '@theme-ui/components'
 
 // import {buildImageObj} from '../lib/helpers'
 // import {imageUrlFor} from '../lib/image-url'
@@ -12,17 +12,18 @@ import PortableText from './portableText'
 function GenericPage (props) {
   const {_rawBody, title} = props
   return (
-    <div
-      sx={{
-        variant: 'styles'
-      }}>
+    <Container sx={{variant: 'styles', maxWidth: '7xl', p: 4, py: 5, bg: 'gray.1'}}>
       {/* <Styled.root> */}
-      <Container sx={{maxWidth: '5xl', p: 4, py: 5, bg: 'gray.1'}}>
-        <Styled.h1>{title}</Styled.h1>
-        {_rawBody && <PortableText blocks={_rawBody} />}
-      </Container>
+      <Flex >
+        <Box sx={{width: ['full', 'full', '3/5']}}>
+          <div sx={{marginBottom: 4}} >
+            <Styled.h1 sx={{variant: 'text.caps'}}>{title}</Styled.h1>
+          </div>
+          {_rawBody && <PortableText blocks={_rawBody} />}
+        </Box>
+      </Flex>
       {/* </Styled.root> */}
-    </div>
+    </Container>
   )
 }
 

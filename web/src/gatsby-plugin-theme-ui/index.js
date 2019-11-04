@@ -75,8 +75,8 @@ export default {
     // 'sans': '-apple-system, BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"',
     // 'serif': 'Georgia, Cambria, "Times New Roman", Times, serif',
     // 'mono': 'Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace',
-    'body': '"Dosis", sans-serif',
-    'heading': 'inherit'
+    'heading': '"Dosis", sans-serif',
+    'body': '"Lato", sans-serif'
     // 'monospace': 'Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace'
   },
   'fontSizes': [
@@ -151,6 +151,7 @@ export default {
     '4xl': '56rem',
     '5xl': '64rem',
     '6xl': '72rem',
+    '7xl': '80rem',
     '1/2': '50%',
     '1/3': '33.333333%',
     '2/3': '66.666667%',
@@ -236,23 +237,6 @@ export default {
       fontFamily: 'body',
       fontSize: '2'
     },
-    // Main: {
-    //   'h2': {
-    //     ...sharedHeadingStyles,
-    //     'fontSize': 5,
-    //     'mt': 2,
-    //     'color': 'primary'
-    //   },
-    //   'a': {
-    //     'color': 'secondary',
-    //     'textDecoration': 'none',
-    //     'fontWeight': 'bold',
-    //     ':hover': {
-    //       'textDecoration': 'underline',
-    //       'color': 'primary'
-    //     }
-    //   }
-    // },
     'a': {
       'color': 'secondary',
       'textDecoration': 'none',
@@ -261,6 +245,9 @@ export default {
         'textDecoration': 'underline',
         'color': 'primary'
       }
+    },
+    'p': {
+      fontSize: 2
     },
     'h1': {
       ...sharedHeadingStyles,

@@ -56,6 +56,8 @@
     "tailwind.macro": "^0.5.10",
     "tailwindcss": "^0.7.4",
     "theme-ui": "^0.2.46",
-    "typeface-dosis": "0.0.72"
+    "typeface-dosis": "0.0.72",
+    "typeface-lato": "0.0.75",
+    "typeface-open-sans": "0.0.75"
   }
 }

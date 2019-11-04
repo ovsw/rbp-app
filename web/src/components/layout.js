@@ -5,7 +5,10 @@ import {Layout as ThemeLayout} from 'theme-ui'
 import Header from './header'
 import Footer from './footer'
 
+//  TODO: Decide on body font
 import 'typeface-dosis'
+import 'typeface-open-sans'
+import 'typeface-lato'
 
 const Layout = ({children, onHideNav, onShowNav, showNav, siteTitle}) => (
   <ThemeLayout>
