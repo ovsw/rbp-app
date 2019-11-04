@@ -1,62 +1,39 @@
-import React from 'react'
-import tw from 'tailwind.macro'
-import styled from 'styled-components'
-
-const HeroRootDiv = styled.div`
-  ${tw`border-solid border-0 border-b border-grey-light`};
-  ${tw`py-32`};
-`
-const ColumnContainer = styled.div`
-  ${tw`max-w-2xl mx-auto`};
-  ${tw`flex`};
-`
-const LeftCol = styled.div`
-  ${tw`w-2/3`};
-`
-const RightCol = styled.div`
-  ${tw`w-1/3`};
-`
+/** @jsx jsx */
+import React from 'react' // eslint-disable-line
+import {Container, jsx, Styled} from 'theme-ui'
+import {Box, Flex} from '@theme-ui/components'
 
 const Hero = () => {
   return (
-    <HeroRootDiv>
-      <ColumnContainer>
-        <LeftCol>
-          <div className='banner-info'>
-            <h1>A SUMMER DAY CAMP <span>LIKE NO OTHER...</span></h1>
-            <p> Your kids deserve the best. The best supervision, the best activities, the best friends, the best memories. </p>
-            <a href='tel:6096225658' className='btn btn-primary'>call us: (609) 622-5658</a>
-          </div>
-        </LeftCol>
-        <RightCol>
-          <div className='form-wrapper header-contact-form-wrapper'>
-            <div className='section-title text-center'>
-              <h2>CONTACT US</h2>
-              <p>Please Contact Us Using the Form Below</p>
+    <Box as='section' pt={[1, 2, 3, 5]} pb={[1, 2, 3, 5]} sx={{
+      borderBottom: '1px solid lightgrey',
+      bg: 'gray.2'
+    }}className='Hero'>
+      <Container sx={{maxWidth: '5xl'}}>
+
+        <Flex sx={{flexWrap: 'wrap'}}>
+          <Box sx={{width: ['full', '2/3']}}>
+            <div className='banner-info'>
+              <Styled.h2 as='h1' sx={{variant: 'text.caps'}} >A Summer Day Camp <span>Like no Other...</span></Styled.h2>
+              <p><span sx={{fontWeight: 'bold'}}>Your kids deserve the best.</span> <br />The best supervision, the best activities, the best friends, the best memories. </p>
+              <button href='tel:6096225658' sx={{variant: 'buttons.outline', py: 3}}>call us: (609) 622-5658</button>
             </div>
-            <form id='header-contact-form' className='header-contact-form' action='mailer' method='post' name='Header Form'>
-              <div className='form-group'>
-                <input type='text' name='phone' id='phone' className='form-control' />
-                <label htmlFor='phone'>MOBILE PHONE
-                                        NUMBER</label>
-                <div className='messages' />
-              </div>
-              <div className='form-group'><input type='email' name='email' id='email' className='form-control' /> <label htmlFor='email'>EMAIL</label>
-                <div className='messages' />
-              </div>
-              <div className='form-group'><input type='text' name='zip-code' id='zip' className='form-control' /> <label htmlFor='zip'>ZIP CODE</label>
-                <div className='messages' />
+          </Box>
+          <Box sx={{width: ['full', '1/3']}}>
+            <div>
+              <div>
+                <Styled.h2>Contact Us</Styled.h2>
+                {/* <p>Please Contact Us Using the Form Below</p> */}
               </div>
 
-              <div className='form-group btn-wrap'>
-                <button type='submit' className='btn btn-secondary form-control'>SUBMIT
-                </button>
-              </div>
-            </form>
-          </div>
-        </RightCol>
-      </ColumnContainer>
-    </HeroRootDiv>
+              <iframe src='https://services.cognitoforms.com/f/xPoircp7HEGoNo_tpFEirg?id=156' style={{position: 'relative', minWidth: '100%', width: '100%'}} frameBorder='0' scrolling='yes' seamless='seamless' height='319' width='100%' />
+              <script src='https://services.cognitoforms.com/scripts/embed.js' />
+
+            </div>
+          </Box>
+        </Flex>
+      </Container>
+    </Box>
   )
 }
 

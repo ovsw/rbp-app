@@ -1,33 +1,25 @@
-import React from 'react'
-import tw from 'tailwind.macro'
-import styled from 'styled-components'
+/** @jsx jsx */
+import React from 'react' // eslint-disable-line
+import {jsx, Styled} from 'theme-ui'
+import {Box, Flex} from '@theme-ui/components'
 
 // containers
 import SectionWithSidebar from '../../../containers/section-with-sidebar'
 // commponents
 import ProgramItem from './program'
 
-// elements
-import HPSection from '../../../elements/hp-section'
-
-const ProgramsRootDiv = styled(HPSection)`
-  ${tw`border-solid border-0 border-b border-grey-light`};
-`
-
 const Programs = () => {
   return (
-    <ProgramsRootDiv>
+    <section sx={{variant: 'sections.hpSection'}}>
       <SectionWithSidebar sidebar={<Sidebar />} mainContent={<MainContent />} leftSidebar />
-    </ProgramsRootDiv>
+    </section>
   )
 }
 
 const Sidebar = () => {
   return (
-    <div>
-      <div >
-        <h2>Programs</h2>
-      </div>
+    <div sx={{textAlign: 'right'}}>
+      <Styled.h2>Programs</Styled.h2>
       <div>
         <p> Each program provides structured activities chosen for your child's age group, along with well-trained and caring counselors and all the fun and excitement your child needs for the perfect summer. </p>
         <p> To make the summer a little easier for parents, we offer these special benefits for busy families: </p>
@@ -36,7 +28,7 @@ const Sidebar = () => {
           <li>Flexible camp schedules for busy families</li>
           <li>Modified program available to preschoolers</li>
         </ul>
-        <a href='tel:6096225658'> call us: (609) 622-5658</a>
+        <a href='tel:6096225658' sx={{variant: 'buttons.outline', display: 'inline-block'}}>Call Us: (609) 622-5658</a>
       </div>
     </div>
   )
@@ -67,9 +59,13 @@ const programs = [
 
 const MainContent = () => {
   return (
-    <>
-      {programs.map(program => <ProgramItem {...program} key={program.name} />)}
-    </>
+    <Flex sx={{pl: 4, flexWrap: 'wrap'}}>
+      {programs.map(program => (
+        <Box sx={{width: ['full', 'full', '1/2']}}>
+          <ProgramItem {...program} key={program.name} />
+        </Box>
+      ))}
+    </Flex>
   )
 }
 

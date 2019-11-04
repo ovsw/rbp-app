@@ -1,20 +1,15 @@
-import React from 'react'
+/** @jsx jsx */
+import React from 'react' // eslint-disable-line
+import {jsx, Styled} from 'theme-ui'
 import {Link} from 'gatsby'
-
-import tw from 'tailwind.macro'
-import styled from 'styled-components'
-
-const ProgramItemRoot = styled(Link)`
-  ${tw``};
-`
 
 const ProgramItem = ({name, icon, description, link}) => {
   return (
-    <ProgramItemRoot to={link}>
+    <Link to={link} sx={{variant: 'links.programListLink'}}>
       <span className='pine-cone' />
-      <h4>{name}</h4>
+      <Styled.h3>{name}</Styled.h3>
       <p>{description}</p>
-    </ProgramItemRoot>
+    </Link>
   )
 }
 

@@ -36,15 +36,25 @@
     "react-helmet": "^5.2.1"
   },
   "dependencies": {
+    "@emotion/core": "^10.0.22",
+    "@emotion/styled": "^10.0.23",
+    "@mdx-js/react": "^1.5.1",
+    "@theme-ui/components": "^0.2.46",
     "babel-plugin-styled-components": "^1.10.6",
     "gatsby-image": "^2.0.41",
+    "gatsby-plugin-emotion": "^4.1.13",
     "gatsby-plugin-styled-components": "^3.1.11",
+    "gatsby-plugin-theme-ui": "^0.2.43",
+    "gatsby-theme-style-guide": "^0.2.46",
     "get-youtube-id": "^1.0.1",
+    "is-absolute-url": "^3.0.3",
     "react-slick": "^0.25.2",
     "react-youtube": "^7.9.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "^4.4.0",
     "tailwind.macro": "^0.5.10",
-    "tailwindcss": "^0.7.4"
+    "tailwindcss": "^0.7.4",
+    "theme-ui": "^0.2.46",
+    "typeface-dosis": "0.0.72"
   }
 }
