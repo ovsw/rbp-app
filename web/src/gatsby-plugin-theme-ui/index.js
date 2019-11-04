@@ -1,4 +1,4 @@
-import {relative} from 'path'
+// import {relative} from 'path'
 
 const sharedButtonStyles = {
   'py': 3,
@@ -200,7 +200,8 @@ export default {
     '4rem',
     '8rem',
     '16rem',
-    '32rem'
+    '32rem',
+    '1px'
   ],
   'radii': {
     'none': '0',
@@ -246,7 +247,8 @@ export default {
     'h1': {
       ...sharedHeadingStyles,
       'fontSize': 6,
-      'mt': 2
+      'mt': 2,
+      'color': 'primary'
     },
     'h2': {
       ...sharedHeadingStyles,
@@ -257,15 +259,18 @@ export default {
     'h3': {
       ...sharedHeadingStyles,
       'fontSize': 4,
-      'mt': 3
+      'mt': 3,
+      'color': 'primary'
     },
     'h4': {
       ...sharedHeadingStyles,
-      'fontSize': 3
+      'fontSize': 3,
+      'color': 'primary'
     },
     'h5': {
       ...sharedHeadingStyles,
-      'fontSize': 2
+      'fontSize': 2,
+      'color': 'primary'
     },
     'h6': {
       ...sharedHeadingStyles,

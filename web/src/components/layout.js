@@ -11,7 +11,14 @@ const Layout = ({children, onHideNav, onShowNav, showNav, siteTitle}) => (
   <ThemeLayout>
     <Global styles={theme => ({
       '*': {boxSizing: 'border-box'},
-      body: {margin: 0}
+      body: {margin: 0},
+      '.slick-track': {
+        display: 'flex',
+        '.slick-slide': {
+          display: 'flex',
+          height: 'auto'
+        }
+      }
     })} />
     <Header siteTitle={siteTitle} onHideNav={onHideNav} onShowNav={onShowNav} showNav={showNav} />
 

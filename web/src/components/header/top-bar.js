@@ -1,29 +1,10 @@
 /** @jsx jsx */
 import React from 'react' // eslint-disable-line
-import {Container, jsx, Styled} from 'theme-ui'
+import {jsx} from 'theme-ui'
 import {Box, Flex} from '@theme-ui/components'
 
 import {Link} from 'gatsby'
-import tw from 'tailwind.macro'
-import styled from 'styled-components'
-import media from '../../lib/responsive'
 
-const Desktop = styled.div`
-  ${tw`hidden max-w-2xl mx-auto `};
-  ${media.md`${tw`flex`}`};
-`
-const LeftColDiv = styled.div`
-  ${tw`w-1/2 text-right pr-32`};
-  a {
-    ${tw`ml-8`};
-  }
-`
-const RightColDiv = styled.div`
-  ${tw`w-1/2 pl-32`};
-  a {
-    ${tw`mr-8`};
-  }
-`
 const TopBar = () => {
   return (
     <div>

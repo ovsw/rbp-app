@@ -3,20 +3,10 @@ import React from 'react' // eslint-disable-line
 import {jsx, Styled} from 'theme-ui'
 import {Box, Flex} from '@theme-ui/components'
 
-import tw from 'tailwind.macro'
-import styled from 'styled-components'
-
 // containers
 import SectionWithSidebar from '../../../containers/section-with-sidebar'
 // commponents
 import ProgramItem from './program'
-
-// elements
-import HPSection from '../../../elements/hp-section'
-
-const ProgramsRootDiv = styled(HPSection)`
-  ${tw`border-solid border-0 border-b border-grey-light`};
-`
 
 const Programs = () => {
   return (

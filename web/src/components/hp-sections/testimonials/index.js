@@ -1,11 +1,7 @@
-import React from 'react'
+/** @jsx jsx */
+import React from 'react' // eslint-disable-line
+import {jsx, Styled, Container} from 'theme-ui'
 import Slider from 'react-slick'
-
-import tw from 'tailwind.macro'
-import styled from 'styled-components'
-
-// elements
-import HPSection from '../../../elements/hp-section'
 
 import TestimonialItem from './testimonial-item'
 
@@ -13,47 +9,93 @@ import TestimonialItem from './testimonial-item'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
-const TestimonialsRoot = styled(HPSection)`
-  ${tw``};
-`
-const TestimonialsContainer = styled.div`
-  ${tw`max-w-2xl mx-auto`};
-`
-function NextArrow (props) {
-  const {onClick} = props
-  return (
-    <button onClick={onClick}>&gt;</button>
-  )
-}
+// function NextArrow (props) {
+//   const {onClick} = props
+//   return (
+//     <button onClick={onClick}>&gt;</button>
+//   )
+// }
 
-function PrevArrow (props) {
-  const {onClick} = props
-  return (
-    <button onClick={onClick}>&lt;</button>
-  )
-}
+// function PrevArrow (props) {
+//   const {onClick} = props
+//   return (
+//     <button onClick={onClick}>&lt;</button>
+//   )
+// }
 
 const TestimonialsSection = () => {
   const settings = {
     infinite: true,
     slidesToShow: 3,
-    slidesToScroll: 1,
+    slidesToScroll: 3,
     centerMode: false,
     dots: true,
-    arrows: true
+    arrows: true,
+    swipeToSlide: true,
     // prevArrow: <PrevArrow />,
     // nextArrow: <NextArrow />,
     // fade: true,
     // adaptiveHeight: true
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+          // initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ],
+    appendDots: dots => (
+      <div>
+        <ul style={{
+          position: 'relative', top: '50px'}}> {dots} </ul>
+      </div>
+    ),
+    customPaging: i => (
+      <div
+        sx={{
+          width: '1.5rem',
+          height: '1.5rem',
+          fontSize: '1rem',
+          lineHeight: '1.5rem',
+          bg: 'primaryLight',
+          color: 'white',
+          border: '1px blue white',
+          borderRadius: '100%',
+          '.slick-active & ': {
+            bg: 'primary'
+          }
+        }}
+      >
+        {i + 1}
+      </div>
+    )
   }
   return (
-    <TestimonialsRoot>
-      <TestimonialsContainer>
+    <section sx={{variant: 'sections.hpSection'}}>
+      <Styled.h1 as='h2' sx={{textAlign: 'center', position: 'relative', top: '-2rem'}}>What Parents Say</Styled.h1>
+      <Container sx={{maxWidth: '6xl'}}>
         <Slider {...settings}>
           {testimonialsContentTemp.map(testimonial => <TestimonialItem {...testimonial} key={testimonial.name} />)}
         </Slider>
-      </TestimonialsContainer>
-    </TestimonialsRoot>
+      </Container>
+    </section>
   )
 }
 

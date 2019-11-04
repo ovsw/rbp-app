@@ -1,13 +1,12 @@
-import React from 'react'
-
-import tw from 'tailwind.macro'
-import styled from 'styled-components'
+/** @jsx jsx */
+import React from 'react' // eslint-disable-line
+import {jsx, Styled} from 'theme-ui'
 
 const TestimonialItem = ({name = 'missing name', text = 'missing content'}) => {
   return (
-    <div>
-      <h4>{name}</h4>
-      <p>{text}</p>
+    <div sx={{px: 3, py: 4, mx: 2, borderRadius: 'lg', bg: 'white', height: '100%'}}>
+      <Styled.h4 as='h3' sx={{color: 'dark'}}>{name}</Styled.h4>
+      <p sx={{mb: 0}}>{text}</p>
     </div>
   )
 }
