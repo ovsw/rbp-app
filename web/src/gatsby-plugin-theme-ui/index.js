@@ -236,9 +236,27 @@ export default {
       fontFamily: 'body',
       fontSize: '2'
     },
+    // Main: {
+    //   'h2': {
+    //     ...sharedHeadingStyles,
+    //     'fontSize': 5,
+    //     'mt': 2,
+    //     'color': 'primary'
+    //   },
+    //   'a': {
+    //     'color': 'secondary',
+    //     'textDecoration': 'none',
+    //     'fontWeight': 'bold',
+    //     ':hover': {
+    //       'textDecoration': 'underline',
+    //       'color': 'primary'
+    //     }
+    //   }
+    // },
     'a': {
       'color': 'secondary',
       'textDecoration': 'none',
+      'fontWeight': 'bold',
       ':hover': {
         'textDecoration': 'underline',
         'color': 'primary'
