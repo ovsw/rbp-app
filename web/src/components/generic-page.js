@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import React from 'react' // eslint-disable-line
-import {jsx, Styled, Container, Main} from 'theme-ui'
+import {jsx, Styled, Container} from 'theme-ui'
 // import {Box, Flex} from '@theme-ui/components'
 
 // import {buildImageObj} from '../lib/helpers'
