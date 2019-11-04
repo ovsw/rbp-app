@@ -11,6 +11,7 @@ import GenericPage from '../components/generic-page'
 const GenericPageTemplate = props => {
   const {data, errors, location} = props
   const page = data && data.page
+  const section = data && (data.page.section || 'Future Families')
 
   return (
     <Layout>
@@ -22,7 +23,7 @@ const GenericPageTemplate = props => {
           <GraphQLErrorList errors={errors} />
         </Container>
       )}
-      <GenericPage {...page} />
+      <GenericPage {...page} section={section} />
     </Layout>
   )
 }
@@ -39,6 +40,7 @@ export const query = graphql`
       slug {
         current
       }
+      section
       _rawBody(resolveReferences: {maxDepth: 5})
     }
   }

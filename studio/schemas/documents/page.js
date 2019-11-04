@@ -50,10 +50,14 @@ export default {
       }
     },
     {
-      title: 'Parent',
-      name: 'parent',
-      type: 'reference',
-      to: [{type: 'page'}]
+      title: 'Section',
+      name: 'section',
+      type: 'string',
+      options: {
+        list: ['Future Families', 'About us', 'Current Families', 'Staff'],
+        layout: 'radio',
+        direction: 'horizontal'
+      }
     },
     {
       name: 'body',

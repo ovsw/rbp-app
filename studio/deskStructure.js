@@ -127,13 +127,31 @@ export default () =>
               S.listItem()
                 .title('About Section Pages')
                 .id('aboutSection')
-                .child(S.documentList()
-                  .id('aboutSectionPages')
-                  .title('About Section Pages')
-                  .menuItems(S.documentTypeList('page').getMenuItems())
-                  .filter('_type == $type && references($parentId)')
-                  .params({type: 'page', parentId: 'about'})
-                  .defaultOrdering([{field: '_createdAt', direction: 'asc'}])
+                .child(
+                  S.list()
+                    .title('About Section Pages')
+                    .items([
+                      S.documentListItem()
+                        .id('2bded937-a7ca-4784-b728-877c86f8eab0')
+                        .title('Our Directors')
+                        .schemaType('page'),
+                      S.documentListItem()
+                        .id('7ff6a741-2162-4497-8482-50f8f67674f5')
+                        .title('Our Staff')
+                        .schemaType('page'),
+                      S.documentListItem()
+                        .id('03370fe5-2325-4475-ae11-52c7b36d1733')
+                        .title('History')
+                        .schemaType('page'),
+                      S.documentListItem()
+                        .id('f6c7622a-6a77-4347-a69a-440d01d39988')
+                        .title('Location')
+                        .schemaType('page'),
+                      S.documentListItem()
+                        .id('e768a61e-a59c-49a9-8caf-d4a2a90e04dd')
+                        .title('ACA Accreditation')
+                        .schemaType('page')
+                    ])
                 )
                 .icon(MdFolder),
               S.documentListItem()

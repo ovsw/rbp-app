@@ -6,16 +6,22 @@ import {Box, Flex} from '@theme-ui/components'
 // import {buildImageObj} from '../lib/helpers'
 // import {imageUrlFor} from '../lib/image-url'
 import PortableText from './portableText'
+import PageSideNav from './generic-page-side-nav'
 
 // import styles from './blog-post.module.css'
 
-function GenericPage (props) {
-  const {_rawBody, title} = props
+function GenericPage ({_rawBody, title, section}) {
   return (
-    <Container sx={{variant: 'styles', maxWidth: '7xl', p: 4, py: 5, bg: 'gray.1'}}>
+    <Container sx={{maxWidth: '6xl', p: 4, py: 5, bg: 'gray.1'}}>
       {/* <Styled.root> */}
       <Flex >
-        <Box sx={{width: ['full', 'full', '3/5']}}>
+        <Box sx={{width: ['full', 'full', '1/4']}}>
+          <aside>
+            {/* // TODO: add other sidebar widgets */}
+            <PageSideNav section={section} />
+          </aside>
+        </Box>
+        <Box sx={{variant: 'styles', width: ['full', 'full', '3/4']}}>
           <div sx={{marginBottom: 4}} >
             <Styled.h1 sx={{variant: 'text.caps'}}>{title}</Styled.h1>
           </div>

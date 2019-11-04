@@ -2,6 +2,8 @@ import React from 'react'
 import HamburgerIcon from './hamburger'
 import ChevronDownIcon from './chevron-down'
 
+// TODO: add icons.
+
 function Icon (props) {
   switch (props.symbol) {
     case 'hamburger':
