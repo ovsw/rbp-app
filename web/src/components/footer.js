@@ -1,5 +1,3 @@
-//  TODO: add social Links
-
 /** @jsx jsx */
 import React from 'react' // eslint-disable-line
 import {jsx, Styled, Container, Footer as ThemeFooter} from 'theme-ui'
@@ -35,7 +33,7 @@ const Footer = () => {
 
             </div>
           </Box>
-          <Box sx={{width: ['full', 'full', '1/2'], px: 4}}>
+          <Box sx={{width: ['full', 'full', '1/2'], px: 4, textAlign: 'center'}}>
             <SocialLinks />
             <img src={AcaLogoImg} sx={{maxWidth: 'full', width: '48'}} />
           </Box>

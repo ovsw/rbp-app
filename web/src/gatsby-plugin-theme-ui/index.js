@@ -56,7 +56,7 @@ export default {
     'light': '#f7fafc',
     'grayDark': '#2d3748',
     'dark': '#2d3748',
-    'black': '#000',
+    'black': '#282828',
     'transparent': 'transparent',
     'gray': [
       null,
@@ -546,7 +546,8 @@ export default {
   lists: {
     reset: {
       listStyle: 'none',
-      padding: 0
+      p: 0,
+      m: 0
     }
   },
   sections: {
