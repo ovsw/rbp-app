@@ -25,10 +25,10 @@ const PageSidebar = ({section}) => {
       <h4>{currentSectionMenuStructure[0].title}</h4>
       <ul>
         {sideMenuItems.map(menuItem => (
-          <li><Navlink to={menuItem.slug}>{menuItem.title}</Navlink>
+          <li key={menuItem.slug}><Navlink to={menuItem.slug}>{menuItem.title}</Navlink>
             { menuItem.children.length > 0 &&
             <ul>
-              {menuItem.children.map(childItem => <li><Navlink to={childItem.slug}>{childItem.title}</Navlink></li>)}
+              {menuItem.children.map(childItem => <li key={childItem.slug}><Navlink to={childItem.slug}>{childItem.title}</Navlink></li>)}
             </ul>
             }
           </li>
