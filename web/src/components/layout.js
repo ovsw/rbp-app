@@ -14,7 +14,10 @@ const Layout = ({children, onHideNav, onShowNav, showNav, siteTitle}) => (
   <ThemeLayout>
     <Global styles={theme => ({
       '*': {boxSizing: 'border-box'},
-      body: {margin: 0},
+      body: {
+        margin: 0,
+        overflow: showNav ? 'hidden' : 'auto'
+      },
       '.slick-track': {
         display: 'flex',
         '.slick-slide': {

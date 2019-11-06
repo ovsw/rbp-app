@@ -19,8 +19,10 @@ const MainNav = ({navStructure, showNav}) => {
           bg: 'primary',
           display: [navDisplay, navDisplay, 'none'],
           position: ['absolute', 'absolute'],
-          width: ['auto', 'auto'],
-          top: '4.3rem',
+          width: 'auto',
+          height: ['84vh', '92vh'],
+          overflow: 'scroll',
+          top: ['16vh', '8vh'],
           left: 0,
           right: 0,
           boxShadow: '0 0 10px rgba(0, 0, 0, 0.25)'

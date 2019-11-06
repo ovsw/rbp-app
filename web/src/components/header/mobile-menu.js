@@ -36,10 +36,13 @@ class MobileMenu extends React.Component {
   render () {
     const {menuTitle, mainLink, menuColumns} = this.props
     const {subMenuVisible} = this.state
+
     return (
-      <li sx={{
-        mx: 4,
-        borderBottom: '2px solid black'
+      <Flex as='li' sx={{
+        flexWrap: 'wrap',
+        borderBottom: '1px solid',
+        borderColor: 'primaryLight',
+        justifyContent: 'space-between'
       }}>
         <NavLink
           role='link'
@@ -53,9 +56,9 @@ class MobileMenu extends React.Component {
           {menuTitle}
         </NavLink>
         <button
-          onTouchEnd={this.toggleSubMenu}
+          onClick={this.toggleSubMenu}
           sx={{
-            variant: 'buttons.bordered',
+            variant: 'buttons.mobileMenuExpand',
             color: 'white'
           }}
         >+
@@ -69,7 +72,11 @@ class MobileMenu extends React.Component {
             zIndex: 900
           }}
         >
-          <Flex className='MenuColumnsContainer' menuTitle={menuTitle}>
+          <Flex className='MenuColumnsContainer' menuTitle={menuTitle}
+            sx={{
+              width: 'full'
+            }}
+          >
             {menuColumns.map(column => (
               <ul key={column.title} sx={{
                 variant: 'lists.reset',
@@ -105,7 +112,7 @@ class MobileMenu extends React.Component {
             ))}
           </Flex>
         </div>
-      </li>
+      </Flex>
     )
   }
 }

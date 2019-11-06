@@ -421,6 +421,25 @@ export default {
         'borderBottomStyle': 'solid',
         'borderBottomColor': 'primaryHover'
       }
+    },
+    'mobileMenuExpand': {
+      'pt': 2,
+      'pb': 1,
+      'px': 3,
+      'cursor': 'pointer',
+      'lineHeight': 'inherit',
+      'fontSize': '100%',
+      textDecoration: 'none',
+      'backgroundColor': 'primary',
+      'borderWidth': '0',
+      'borderLeftWidth': '1px',
+      'borderStyle': 'solid',
+      'borderColor': 'primaryLight',
+      'color': 'white',
+      'fontWeight': 'bold',
+      '&:hover': {
+        'backgroundColor': 'primaryHover'
+      }
     }
   },
   'inputs': {
@@ -500,7 +519,7 @@ export default {
       'color': 'primary',
       'textDecoration': 'none',
       pt: 2,
-      pb: 1,
+      pb: 2,
       px: 2
     },
     'navSub': {
