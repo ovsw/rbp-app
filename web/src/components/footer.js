@@ -13,8 +13,8 @@ const Footer = () => {
   return (
     <ThemeFooter sx={{display: 'block'}}>
       <Container>
-        <Flex>
-          <Box sx={{width: ['full', 'full', '1/2'], px: 4, textAlign: 'right', borderRight: '1px solid lightgray'}}>
+        <Flex sx={{flexWrap: 'wrap'}}>
+          <Box sx={{width: ['full', 'full', '1/2'], px: [0, 4], py: [4, 0], textAlign: ['center', 'right'], borderRight: ['none', '1px solid lightgray']}}>
             <div className='vcard'>
               <div className='org'><Styled.h3 as='h3' sx={{mt: 0}}>Rambling Pines Day Camp</Styled.h3></div>
               <div className='tel'>
