@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import React from 'react' // eslint-disable-line
 import {jsx} from 'theme-ui'
-import {Link} from 'gatsby'
 
 import {FaFacebookSquare, FaYoutubeSquare, FaTwitterSquare} from 'react-icons/fa'
 
@@ -19,9 +18,9 @@ const SocialLinks = () => {
         fontSize: 5
       }
     }}>
-      <li><Link to='https://facebook.com' sx={{color: '#3b5998'}}><FaFacebookSquare /></Link></li>
-      <li><Link to='https://youtube.com' sx={{color: '#ff0000'}}><FaYoutubeSquare /></Link></li>
-      <li><Link to='https://twitter.com' sx={{color: '#00acee'}}><FaTwitterSquare /></Link></li>
+      <li><a href='https://facebook.com' sx={{color: '#3b5998'}} rel='noopener noreferrer'><FaFacebookSquare /></a></li>
+      <li><a href='https://youtube.com' sx={{color: '#ff0000'}} rel='noopener noreferrer'><FaYoutubeSquare /></a></li>
+      <li><a href='https://twitter.com' sx={{color: '#00acee'}} rel='noopener noreferrer'><FaTwitterSquare /></a></li>
     </ul>
   )
 }
