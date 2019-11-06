@@ -1,67 +1,68 @@
-// TODO: add mobile styles
-
 /** @jsx jsx */
 import React from 'react' // eslint-disable-line
 import {jsx} from 'theme-ui'
-import {Flex} from '@theme-ui/components'
-import NavLink from '../../../elements/nav-link'
 
-class Megamenu extends React.Component {
+import {Flex} from '@theme-ui/components'
+import NavLink from '../../elements/nav-link'
+
+class MobileMenu extends React.Component {
   constructor (props) {
     super(props)
 
-    this.toggleMegaMenu = () => {
-      this.setState(state => ({megaMenuVisible: !state.megaMenuVisible}))
+    this.toggleSubMenu = () => {
+      console.log('toggled')
+      this.setState(state => ({subMenuVisible: !state.subMenuVisible}))
     }
 
-    this.showMenu = () => {
-      clearTimeout(this.menuTimeout)
-      this.setState({megaMenuVisible: true})
-    }
-    this.hideMenu = () => {
+    // this.showSubMenu = () => {
+    //   clearTimeout(this.menuTimeout)
+    //   this.setState({subMenuVisible: true})
+    // }
+    this.hideSubMenu = () => {
       this.menuTimeout = setTimeout(() => {
-        this.setState({megaMenuVisible: false})
+        this.setState({subMenuVisible: false})
       }, 50)
     }
 
     this.onNavClick = () => {
-      this.hideMenu()
+      this.hideSubMenu()
     }
 
     this.state = {
-      megaMenuVisible: false
+      subMenuVisible: false
     }
   }
 
   render () {
     const {menuTitle, mainLink, menuColumns} = this.props
-    const {megaMenuVisible} = this.state
+    const {subMenuVisible} = this.state
     return (
       <li sx={{
         mx: 4,
         borderBottom: '2px solid black'
       }}>
         <NavLink
-          onTouchStart={this.toggleMegaMenu}
-          onMouseEnter={this.showMenu}
-          onMouseLeave={this.hideMenu}
           role='link'
           tabIndex='-1'
           to={mainLink}
           sx={{
             variant: 'links.navMain',
-            color: ['white', 'white', 'primary']
+            color: 'white'
           }}
         >
           {menuTitle}
         </NavLink>
-        <div
-          onMouseEnter={this.showMenu}
-          onMouseLeave={this.hideMenu}
+        <button
+          onTouchEnd={this.toggleSubMenu}
           sx={{
-            display: megaMenuVisible ? 'block' : 'none',
-            position: 'absolute',
-            top: '3.2rem',
+            variant: 'buttons.bordered',
+            color: 'white'
+          }}
+        >+
+        </button>
+        <div
+          sx={{
+            display: subMenuVisible ? 'block' : 'none',
             textAlign: 'left',
             bg: 'primaryDark',
             color: 'white',
@@ -109,4 +110,4 @@ class Megamenu extends React.Component {
   }
 }
 
-export default Megamenu
+export default MobileMenu
