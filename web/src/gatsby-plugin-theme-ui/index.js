@@ -1,3 +1,5 @@
+import {redirectTo} from '@reach/router'
+
 // import {relative} from 'path'
 
 const sharedButtonStyles = {
@@ -535,6 +537,20 @@ export default {
       textTransform: 'uppercase',
       fontSize: '1',
       fontWeight: 'bold'
+    },
+    'sidebarNav': {
+      color: 'dark',
+      textDecoration: 'none',
+      // textTransform: 'uppercase',
+      fontSize: '1',
+      fontWeight: 'bold',
+      display: 'block',
+      py: 2,
+      px: 2,
+      '&.active': {
+        bg: 'primary',
+        color: 'white'
+      }
     },
     'programListLink': {
       textDecoration: 'none',

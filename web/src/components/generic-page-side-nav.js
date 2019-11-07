@@ -22,13 +22,38 @@ const PageSidebar = ({section}) => {
   // TODO: style side nav
   return (
     <>
-      <h4>{currentSectionMenuStructure[0].title}</h4>
-      <ul>
+      <h4 sx={{
+        borderBottom: '2px solid',
+        borderBottomColor: 'gray.5',
+        pb: 2,
+        mb: 0
+      }}>{currentSectionMenuStructure[0].title}</h4>
+      <ul sx={{
+        variant: 'lists.reset'
+      }}>
         {sideMenuItems.map(menuItem => (
-          <li key={menuItem.slug}><Navlink to={menuItem.slug}>{menuItem.title}</Navlink>
+          <li key={menuItem.slug} sx={{
+            borderBottom: '1px solid',
+            borderBottomColor: 'gray.4'
+          }}>
+            <Navlink to={menuItem.slug} activeClass='active' sx={{
+              variant: 'links.sidebarNav'
+            }}>{menuItem.title}</Navlink>
             { menuItem.children.length > 0 &&
-            <ul>
-              {menuItem.children.map(childItem => <li key={childItem.slug}><Navlink to={childItem.slug}>{childItem.title}</Navlink></li>)}
+            <ul sx={{
+              pl: 4
+            }}>
+              {menuItem.children.map(childItem => (
+                <li key={childItem.slug} sx={{
+                  borderTop: '1px solid',
+                  borderTopColor: 'gray.4'
+                }}>
+                  <Navlink to={childItem.slug} sx={{
+                    variant: 'links.sidebarNav',
+                    fontWeight: 'normal'
+                  }}>{childItem.title}</Navlink>
+                </li>
+              ))}
             </ul>
             }
           </li>
