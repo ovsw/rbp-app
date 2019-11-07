@@ -8,12 +8,14 @@ const SectionWithLeftSidebar = ({sidebar = <p>no sidebar</p>, mainContent = <p>n
     <Container sx={{maxWidth: '6xl'}}>
       <Flex
         sx={{
-          flexWrap: 'wrap',
-          flexDirection: leftSidebar ? 'row-reverse' : 'row'
+          flexWrap: 'wrap'
+          // flexDirection: leftSidebar ? 'row-reverse' : 'row'
         }}
       >
         <Box sx={{
-          width: ['full', 'full', '2/3']
+          width: ['full', 'full', '2/3'],
+          order: leftSidebar ? '1' : '2',
+          mt: [5, 5, 0]
         }}>
           {mainContent}
         </Box>

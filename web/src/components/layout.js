@@ -18,6 +18,9 @@ const Layout = ({children, onHideNav, onShowNav, showNav, siteTitle}) => (
         margin: 0,
         overflow: showNav ? 'hidden' : 'auto'
       },
+      img: {
+        maxWidth: '100%'
+      },
       '.slick-track': {
         display: 'flex',
         '.slick-slide': {

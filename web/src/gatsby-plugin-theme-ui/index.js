@@ -558,11 +558,11 @@ export default {
   },
   sections: {
     hpSection: {
-      py: '6',
+      py: [3, 4, 5, 6],
       bg: 'background'
     },
     hpSectionLight: {
-      py: '6',
+      py: [3, 4, 5, 6],
       bg: 'white'
     }
   }
