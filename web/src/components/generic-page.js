@@ -14,10 +14,11 @@ function GenericPage ({_rawBody, title, section}) {
   return (
     <Container sx={{maxWidth: '6xl', p: 4, py: 5, bg: 'gray.1'}}>
       {/* <Styled.root> */}
-      <Flex >
+      <Flex sx={{flexWrap: 'wrap'}}>
         <Box sx={{width: ['full', 'full', '1/4']}}>
           <aside sx={{
-            pr: 4
+            pr: [0, 0, 4],
+            pb: 4
           }}>
             {/* // TODO: add other sidebar widgets */}
             <PageSideNav section={section} />

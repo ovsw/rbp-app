@@ -253,13 +253,16 @@ export default {
     },
     'h1': {
       ...sharedHeadingStyles,
+      fontWeight: 'normal',
+
       'fontSize': 6,
       'mt': 2,
-      'color': 'primary'
+      'color': 'primaryDark'
     },
     'h2': {
       ...sharedHeadingStyles,
       'fontSize': 5,
+      fontWeight: 'normal',
       'mt': 2,
       'color': 'primary'
     },
@@ -543,13 +546,15 @@ export default {
       textDecoration: 'none',
       // textTransform: 'uppercase',
       fontSize: '1',
-      fontWeight: 'bold',
+      fontWeight: 'normal',
       display: 'block',
       py: 2,
       px: 2,
       '&.active': {
-        bg: 'primary',
-        color: 'white'
+        bg: 'primaryLight',
+        color: 'white',
+        fontWeight: 'bold'
+
       }
     },
     'programListLink': {
