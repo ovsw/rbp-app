@@ -33,27 +33,27 @@ const PageSidebar = ({section}) => {
 
   return (
     <>
-      <Flex sx={{
+      <Flex onClick={toggleExpanded} sx={{
         justifyContent: 'space-between',
         borderBottom: ['none', 'none', '2px solid'],
         borderBottomColor: 'gray.5',
         pl: [3, 3, 0],
-        bg: ['primary', 'primary', 'transparent']
+        bg: ['primary', 'primary', 'transparent'],
+        cursor: 'pointer'
       }}>
         <h4 sx={{
           m: 0,
-          py: 2,
-
+          py: 3,
           color: ['white', 'white', 'primary']
         }}>
           {currentSectionMenuStructure[0].title}
         </h4>
-        <button onClick={toggleExpanded} sx={{
+        <button sx={{
           display: ['inline-block', 'inline-block', 'none'],
           bg: 'primaryHover',
           color: 'white',
           border: 'none',
-          px: 3,
+          px: '1.5rem',
           cursor: 'pointer'
         }}>+</button>
       </Flex>
