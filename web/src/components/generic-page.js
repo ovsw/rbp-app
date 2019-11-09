@@ -26,7 +26,6 @@ function GenericPage ({_rawBody, title, section}) {
             pr: [0, 0, 4],
             pb: 4
           }}>
-            {/* // TODO: add other sidebar widgets */}
             <PageSideNav section={section} />
           </aside>
         </Box>
