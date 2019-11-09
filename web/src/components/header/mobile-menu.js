@@ -59,17 +59,21 @@ class MobileMenu extends React.Component {
           onClick={this.toggleSubMenu}
           sx={{
             variant: 'buttons.mobileMenuExpand',
-            color: 'white'
+            color: 'white',
+            bg: subMenuVisible ? 'primaryHover' : 'primary'
           }}
-        >+
+        >{subMenuVisible ? '-' : '+'}
         </button>
         <div
           sx={{
-            display: subMenuVisible ? 'block' : 'none',
+            maxHeight: subMenuVisible ? '1000px' : '0',
+            transition: 'all 400ms ease-out',
+            overflow: 'hidden',
             textAlign: 'left',
             bg: 'primaryDark',
             color: 'white',
-            zIndex: 900
+            zIndex: 900,
+            width: 'full'
           }}
         >
           <Flex className='MenuColumnsContainer' menuTitle={menuTitle}

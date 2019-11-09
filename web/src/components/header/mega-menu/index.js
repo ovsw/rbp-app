@@ -63,7 +63,7 @@ class Megamenu extends React.Component {
             position: 'absolute',
             top: '3.2rem',
             textAlign: 'left',
-            bg: 'primaryDark',
+            bg: 'primary',
             color: 'white',
             zIndex: 900
           }}

@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import React,  { useState } from 'react' // eslint-disable-line
 import {jsx} from 'theme-ui'
-import {Box, Flex} from '@theme-ui/components'
+import {Flex} from '@theme-ui/components'
 
 import {useSiteMetadata} from '../hooks/use-site-metadata'
 

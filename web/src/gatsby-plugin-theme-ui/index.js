@@ -430,7 +430,7 @@ export default {
     'mobileMenuExpand': {
       'pt': 2,
       'pb': 1,
-      'px': 3,
+      'width': '3rem',
       'cursor': 'pointer',
       'lineHeight': 'inherit',
       'fontSize': '100%',

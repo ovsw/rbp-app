@@ -10,14 +10,14 @@ import MegaMenu from './mega-menu'
 import LogoImage from '../../images/rambling-pines-logo-retina.png'
 
 const MainNav = ({navStructure, showNav}) => {
-  const navDisplay = showNav ? 'block' : 'none'
   return (
     <>
-      {/* <MainMenu menuItems={site.siteMetadata.siteNav} /> */}
+      {/* mobile */}
       <nav
         sx={{
           bg: 'primary',
-          display: [navDisplay, navDisplay, 'none'],
+          maxHeight: showNav ? '1000px' : '0',
+          transition: 'all 400ms ease-out',
           position: ['absolute', 'absolute'],
           width: 'auto',
           height: ['84vh', '92vh'],
@@ -31,21 +31,22 @@ const MainNav = ({navStructure, showNav}) => {
         <Flex as='ul' sx={{
           variant: 'lists.reset',
           m: 0,
-          pt: [3, 3, 2],
-          pb: [4, 4, 2],
+          pt: [0, 0],
+          pb: [4, 4],
           px: 0,
           display: ['block', 'block', 'flex'],
           justifyContent: 'flex-end'
         }}>
           {navStructure.map((mainMenuItem, i) => {
             return (
-              <MobileMenu key={mainMenuItem.slug} menuTitle={mainMenuItem.title} mainLink={mainMenuItem.slug} menuColumns={mainMenuItem.children} key={mainMenuItem.slug} />
+              <MobileMenu key={mainMenuItem.slug} menuTitle={mainMenuItem.title} mainLink={mainMenuItem.slug} menuColumns={mainMenuItem.children} />
             )
           })}
         </Flex>
 
       </nav>
 
+      {/* destop */}
       <nav
         sx={{
           display: ['none', 'none', 'block'],
@@ -84,7 +85,7 @@ const MainNav = ({navStructure, showNav}) => {
               )
             } else {
               return (
-                <MegaMenu key={mainMenuItem.slug} menuTitle={mainMenuItem.title} mainLink={mainMenuItem.slug} menuColumns={mainMenuItem.children} key={mainMenuItem.slug} />
+                <MegaMenu key={mainMenuItem.slug} menuTitle={mainMenuItem.title} mainLink={mainMenuItem.slug} menuColumns={mainMenuItem.children} />
               )
             }
           })}

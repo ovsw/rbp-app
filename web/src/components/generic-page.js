@@ -24,7 +24,7 @@ function GenericPage ({_rawBody, title, section}) {
             <PageSideNav section={section} />
           </aside>
         </Box>
-        <Box sx={{variant: 'styles', width: ['full', 'full', '3/4'], pl: 4}}>
+        <Box sx={{variant: 'styles', width: ['full', 'full', '3/4'], pl: [0, 0, 4]}}>
           <div sx={{marginBottom: 4}} >
             <Styled.h1 sx={{variant: 'text.caps'}}>{title}</Styled.h1>
           </div>
