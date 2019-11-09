@@ -1,4 +1,4 @@
-import {redirectTo} from '@reach/router'
+// import {redirectTo} from '@reach/router'
 
 // import {relative} from 'path'
 
@@ -554,7 +554,10 @@ export default {
         bg: 'primaryLight',
         color: 'white',
         fontWeight: 'bold'
-
+      },
+      '&:hover': {
+        bg: 'primary',
+        color: 'white'
       }
     },
     'programListLink': {

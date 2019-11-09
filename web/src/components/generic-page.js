@@ -14,7 +14,13 @@ function GenericPage ({_rawBody, title, section}) {
   return (
     <Container sx={{maxWidth: '6xl', p: 4, py: 5, bg: 'gray.1'}}>
       {/* <Styled.root> */}
-      <Flex sx={{flexWrap: 'wrap'}}>
+      <Flex sx={{flexWrap: 'wrap', flexDirection: 'row-reverse'}}>
+        <Box sx={{variant: 'styles', width: ['full', 'full', '3/4'], pl: [0, 0, 4]}}>
+          <div sx={{marginBottom: 4}} >
+            <Styled.h1 sx={{variant: 'text.caps'}}>{title}</Styled.h1>
+          </div>
+          {_rawBody && <PortableText blocks={_rawBody} />}
+        </Box>
         <Box sx={{width: ['full', 'full', '1/4']}}>
           <aside sx={{
             pr: [0, 0, 4],
@@ -23,12 +29,6 @@ function GenericPage ({_rawBody, title, section}) {
             {/* // TODO: add other sidebar widgets */}
             <PageSideNav section={section} />
           </aside>
-        </Box>
-        <Box sx={{variant: 'styles', width: ['full', 'full', '3/4'], pl: [0, 0, 4]}}>
-          <div sx={{marginBottom: 4}} >
-            <Styled.h1 sx={{variant: 'text.caps'}}>{title}</Styled.h1>
-          </div>
-          {_rawBody && <PortableText blocks={_rawBody} />}
         </Box>
       </Flex>
       {/* </Styled.root> */}
