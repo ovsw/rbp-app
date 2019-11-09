@@ -14,7 +14,7 @@ const Footer = () => {
     <ThemeFooter sx={{display: 'block'}}>
       <Container>
         <Flex sx={{flexWrap: 'wrap'}}>
-          <Box sx={{width: ['full', 'full', '1/2'], px: [0, 4], py: [4, 0], textAlign: ['center', 'right'], borderRight: ['none', '1px solid lightgray']}}>
+          <Box sx={{width: ['full', '1/2'], px: [0, 4], py: [4, 0], textAlign: ['center', 'right'], borderRight: ['none', '1px solid lightgray']}}>
             <div className='vcard'>
               <div className='org'><Styled.h3 as='h3' sx={{mt: 0}}>Rambling Pines Day Camp</Styled.h3></div>
               <div className='tel'>
@@ -33,7 +33,7 @@ const Footer = () => {
 
             </div>
           </Box>
-          <Box sx={{width: ['full', 'full', '1/2'], px: 4, textAlign: 'center'}}>
+          <Box sx={{width: ['full', '1/2'], px: 4, textAlign: 'center'}}>
             <SocialLinks />
             <img src={AcaLogoImg} sx={{maxWidth: 'full', width: '48'}} />
           </Box>
