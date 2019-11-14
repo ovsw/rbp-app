@@ -18,7 +18,7 @@ const Programs = () => {
 
 const Sidebar = () => {
   return (
-    <div sx={{textAlign: ['left', 'left', 'right']}}>
+    <>
       <Styled.h2>Programs</Styled.h2>
       <div>
         <p> Each program provides structured activities chosen for your child's age group, along with well-trained and caring counselors and all the fun and excitement your child needs for the perfect summer. </p>
@@ -28,9 +28,11 @@ const Sidebar = () => {
           <li>Flexible camp schedules for busy families</li>
           <li>Modified program available to preschoolers</li>
         </ul>
-        <a href='tel:6096225658' sx={{variant: 'buttons.outline', display: 'inline-block'}}>Call Us: (609) 622-5658</a>
+        <div sx={{textAlign: 'center', mt: 4}}>
+          <a href='tel:6096225658' sx={{variant: 'buttons.outline', display: 'inline-block'}}>Call Us: (609) 622-5658</a>
+        </div>
       </div>
-    </div>
+    </>
   )
 }
 
@@ -65,8 +67,8 @@ const MainContent = () => {
   return (
     <Flex sx={{pl: [0, 0, 4], flexWrap: 'wrap'}}>
       {programs.map(program => (
-        <Box key={program.name} sx={{width: ['full', 'full', '1/2']}}>
-          <ProgramItem {...program} />
+        <Box sx={{width: ['full', 'full', '1/2'], display: 'flex'}}>
+          <ProgramItem key={program.name} {...program} />
         </Box>
       ))}
     </Flex>

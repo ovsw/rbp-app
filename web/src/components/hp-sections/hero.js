@@ -35,7 +35,7 @@ const Hero = () => {
         left: 0,
         zIndex: 0
       }}>
-        <HeroVideoBg poster={VideoPoster} />
+        <HeroVideoBg poster='https://rbpvideo-ac97.kxcdn.com/rambling-pines-camp-intro-video.jpg' />
       </div>
       <Container sx={{
         maxWidth: '5xl',

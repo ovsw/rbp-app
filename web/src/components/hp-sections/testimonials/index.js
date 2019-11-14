@@ -9,19 +9,40 @@ import TestimonialItem from './testimonial-item'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
-// function NextArrow (props) {
-//   const {onClick} = props
-//   return (
-//     <button onClick={onClick}>&gt;</button>
-//   )
-// }
+function NextArrow (props) {
+  const {className, style, onClick} = props
+  return (
+    <div
+      className={className}
+      // style={{...style}}
+      onClick={onClick}
+      sx={{
+        left: '-2rem',
+        '&::before': {
+          color: 'primary',
+          fontSize: '2rem'
+        }
+      }}
+    />
+  )
+}
 
-// function PrevArrow (props) {
-//   const {onClick} = props
-//   return (
-//     <button onClick={onClick}>&lt;</button>
-//   )
-// }
+function PrevArrow (props) {
+  const {className, style, onClick} = props
+  return (
+    <div
+      // style={{...style}}
+      className={className}
+      sx={{
+        '&::before': {
+          fontSize: '2rem',
+          color: 'primary'
+        }
+      }}
+      onClick={onClick}
+    />
+  )
+}
 
 const TestimonialsSection = () => {
   const settings = {
@@ -32,8 +53,8 @@ const TestimonialsSection = () => {
     dots: true,
     arrows: true,
     swipeToSlide: true,
-    // prevArrow: <PrevArrow />,
-    // nextArrow: <NextArrow />,
+    prevArrow: <NextArrow />,
+    nextArrow: <PrevArrow />,
     // fade: true,
     // adaptiveHeight: true
     responsive: [
@@ -76,7 +97,6 @@ const TestimonialsSection = () => {
           lineHeight: '1.5rem',
           bg: 'primaryLight',
           color: 'white',
-          border: '1px blue white',
           borderRadius: '100%',
           '.slick-active & ': {
             bg: 'primary'

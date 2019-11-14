@@ -50,7 +50,7 @@ export default {
     'primaryLight': '#4cb0af',
     'primaryDark': '#005354',
     'primaryHover': '#005354',
-    'textMuted': '#8b8a90',
+    'textMuted': '#9da2a0', // #8b8a90
     // 'success': '#9ae6b4', // green
     // 'info': '#63b3ed', // blue
     // 'warning': '#faf089', //  yellow
@@ -565,10 +565,15 @@ export default {
       textDecoration: 'none',
       bg: 'white',
       display: 'block',
-      py: 2,
+      pt: 3,
+      pb: 2,
       px: 3,
       m: 2,
       color: 'primary',
+      textAlign: 'center',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-evenly',
       '& p': {
         color: 'text'
       }
