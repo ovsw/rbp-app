@@ -89,7 +89,7 @@ const TestimonialsSection = () => {
   }
   return (
     <section sx={{variant: 'sections.hpSection'}}>
-      <Styled.h1 as='h2' sx={{textAlign: 'center'}}>What Parents Say</Styled.h1>
+      <Styled.h1 as='h2' sx={{textAlign: 'center', color: 'primary'}}>What Parents Say</Styled.h1>
       <Container sx={{maxWidth: '6xl'}}>
         <Slider {...settings}>
           {testimonialsContentTemp.map(testimonial => <TestimonialItem {...testimonial} key={testimonial.name} />)}

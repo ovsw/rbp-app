@@ -269,6 +269,7 @@ export default {
     'h3': {
       ...sharedHeadingStyles,
       'fontSize': 4,
+      fontWeight: 'normal',
       'mt': 3,
       'color': 'primary'
     },
