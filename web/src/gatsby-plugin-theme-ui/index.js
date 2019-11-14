@@ -37,7 +37,8 @@ export default {
     '640px',
     '769px',
     '1024px',
-    '1280px'
+    '1280px',
+    '1440px'
   ],
   'colors': {
     'text': '#6c6b73',

@@ -25,7 +25,7 @@ const Hero = () => {
         maxWidth: '5xl',
         position: 'relative',
         zIndex: 10,
-        my: 6
+        my: [3, 4, 4, 3, 5]
         // bg: 'rgba(0,0,0,.32)'
       }}>
         <Flex sx={{flexWrap: 'wrap', color: 'white'}}>
