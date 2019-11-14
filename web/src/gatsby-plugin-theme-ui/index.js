@@ -255,7 +255,6 @@ export default {
     'h1': {
       ...sharedHeadingStyles,
       fontWeight: 'normal',
-
       'fontSize': 6,
       'mt': 2,
       'color': 'primaryDark'
