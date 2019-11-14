@@ -42,7 +42,7 @@ const Footer = () => {
       <div sx={{bg: 'white', textAlign: 'center', p: 2, borderTop: '1px solid lightgray', fontSize: 1}}>
       &copy; {new Date().getFullYear()}, Rambling Pines Day Camp
         |
-        Website by <a href='https://ovswebsites.com'>OVS Websites</a>
+        Website by <a href='https://ovswebsites.com' sx={{color: '#f36'}}>OVS Websites</a>
       </div>
     </ThemeFooter>
   )
