@@ -1,6 +1,8 @@
 /** @jsx jsx */
 import React from 'react' // eslint-disable-line
 import {jsx, Styled} from 'theme-ui'
+import {Link, useStaticQuery, graphql} from 'gatsby'
+import Img from 'gatsby-image'
 
 import {FaMap, FaPhone} from 'react-icons/fa'
 
@@ -16,9 +18,22 @@ const TransportationSection = () => {
 }
 
 const MainContent = () => {
+  const {transportationImage} = useStaticQuery(
+    graphql`
+    query {
+      transportationImage: file(relativePath: { eq: "transportation-illustration.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 726) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+    `
+  )
   return (
     <>
-      <img src='//via.placeholder.com/692x582' />
+      <Img fluid={transportationImage.childImageSharp.fluid} />
     </>
   )
 }
