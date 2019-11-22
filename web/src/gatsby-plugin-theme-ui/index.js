@@ -583,7 +583,7 @@ export default {
       'display': 'inline-block',
       'fontWeight': 'bold',
       'textTransform': 'uppercase',
-      'color': 'primary',
+      'color': 'primaryDark',
       'textDecoration': 'none',
       pt: 2,
       pb: 2,

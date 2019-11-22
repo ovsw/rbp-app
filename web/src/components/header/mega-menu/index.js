@@ -39,7 +39,8 @@ class Megamenu extends React.Component {
     return (
       <li sx={{
         mx: 4,
-        borderBottom: '2px solid black'
+        borderBottom: '2px solid',
+        color: 'primary'
       }}>
         <NavLink
           onTouchStart={this.toggleMegaMenu}
@@ -49,8 +50,7 @@ class Megamenu extends React.Component {
           tabIndex='-1'
           to={mainLink}
           sx={{
-            variant: 'links.navMain',
-            color: ['white', 'white', 'primary']
+            variant: 'links.navMain'
           }}
         >
           {menuTitle}
@@ -63,9 +63,10 @@ class Megamenu extends React.Component {
             position: 'absolute',
             top: '3.2rem',
             textAlign: 'left',
-            bg: 'primary',
+            bg: 'primaryDark',
             color: 'white',
-            zIndex: 900
+            zIndex: 900,
+            boxShadow: '3px 3px 6px rgba(0,0,0,0.2)'
           }}
         >
           <Flex className='MenuColumnsContainer' menuTitle={menuTitle}>
