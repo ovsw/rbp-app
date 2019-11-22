@@ -13,6 +13,7 @@ import Layout from '../containers/layout'
 
 import Hero from '../components/hp-sections/hero'
 import Transportation from '../components/hp-sections/transportation'
+import Lunch from '../components/hp-sections/lunch'
 import Programs from '../components/hp-sections/programs'
 import LocationGmap from '../components/hp-sections/location-gmap'
 import Testimonials from '../components/hp-sections/testimonials'
@@ -51,6 +52,7 @@ const IndexPage = props => {
       <Hero />
       <Transportation />
       <Programs />
+      <Lunch />
       <LocationGmap />
       <Testimonials />
 

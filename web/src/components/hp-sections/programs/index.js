@@ -13,7 +13,7 @@ import ProgramItem from './program'
 const Programs = () => {
   return (
     <section sx={{variant: 'sections.hpSection'}}>
-      <SectionWithSidebar sidebar={<Sidebar />} mainContent={<MainContent />} leftSidebar />
+      <SectionWithSidebar sidebar={<Sidebar />} mainContent={<MainContent />} />
     </section>
   )
 }
@@ -21,18 +21,16 @@ const Programs = () => {
 const Sidebar = () => {
   return (
     <>
-      <Styled.h2>Programs</Styled.h2>
-      <div>
-        <p> Each program provides structured activities chosen for your child's age group, along with well-trained and caring counselors and all the fun and excitement your child needs for the perfect summer. </p>
-        <p> To make the summer a little easier for parents, we offer these special benefits for busy families: </p>
-        <ul>
-          <li>Complimentary door-to-door bus service</li>
-          <li>Flexible camp schedules for busy families</li>
-          <li>Modified program available to preschoolers</li>
-        </ul>
-        <div sx={{textAlign: 'center', mt: 4}}>
-          <a href='tel:6096225658' sx={{variant: 'buttons.3DAccent', display: 'inline-block'}}><FaPhone /> Call Us: (609) 622-5658</a>
-        </div>
+      <Styled.h1 as='h2'>Programs</Styled.h1>
+      <p> Each program provides structured activities chosen for your child's age group, along with well-trained and caring counselors and all the fun and excitement your child needs for the perfect summer. </p>
+      <p> To make the summer a little easier for parents, we offer these special benefits for busy families: </p>
+      <ul>
+        <li>Complimentary door-to-door bus service</li>
+        <li>Flexible camp schedules for busy families</li>
+        <li>Modified program available to preschoolers</li>
+      </ul>
+      <div sx={{textAlign: 'center', mt: 4}}>
+        <a href='tel:6096225658' sx={{variant: 'buttons.3DAccent', display: 'inline-block'}}><FaPhone /> Call Us: (609) 622-5658</a>
       </div>
     </>
   )
