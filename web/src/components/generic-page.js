@@ -12,7 +12,7 @@ import PageSideNav from './generic-page-side-nav'
 
 function GenericPage ({_rawBody, title, section}) {
   return (
-    <Container sx={{maxWidth: '6xl', p: 4, py: 5, bg: 'gray.1'}}>
+    <Container sx={{maxWidth: '6xl', p: 4, py: 6}}>
       {/* <Styled.root> */}
       <Flex sx={{flexWrap: 'wrap', flexDirection: 'row-reverse'}}>
         <Box sx={{width: ['full', 'full', '3/4'], pl: [0, 0, 4]}}>

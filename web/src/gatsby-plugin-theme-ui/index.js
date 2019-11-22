@@ -613,7 +613,7 @@ export default {
       py: 2,
       px: 2,
       '&.active': {
-        bg: 'primaryLight',
+        bg: 'primary',
         color: 'white',
         fontWeight: 'bold'
       },
