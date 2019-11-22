@@ -4,13 +4,16 @@ import {Container, jsx, Styled} from 'theme-ui'
 import {Box, Flex} from '@theme-ui/components'
 import HeroVideoBg from './hero-video-bg'
 
+import {FaPhone} from 'react-icons/fa'
+
 import VideoPoster from '../../images/rambling-pines-camp-intro-video.jpg'
 
 const Hero = () => {
   return (
-    <Box as='section' pt={[1, 2, 3, 5]} pb={[1, 2, 3, 5]} sx={{
+    <Box as='section' pt={[1, 2, 3, 6]} pb={[1, 2, 3, 6]} sx={{
       borderBottom: '1px solid lightgrey',
       position: 'relative',
+      zIndex: '1',
       // bg: 'gray.2',
       backgroundImage: `url('${VideoPoster}')`,
       backgroundSize: 'cover',
@@ -57,21 +60,20 @@ const Hero = () => {
               }}>Welcome to Rambling Pines</Styled.h1>
               <Styled.h2 sx={{color: 'white', textShadow: '2px 2px 2px rgba(0,0,0,.5)', fontSize: [2, 3, 5]}} >A Summer Day Camp <span>Like no Other.</span></Styled.h2>
               <p sx={{textShadow: '1px 1px 2px rgba(0,0,0,.5)', fontSize: [1, 2]}}><span sx={{fontWeight: 'bold'}}>Your kids deserve the best.</span> <br />The best supervision, the best activities, the best friends, the best memories. </p>
-              <button href='tel:6096225658' sx={{variant: 'buttons.3D', py: 3, mt: 4}}>Call us: (609) 622-5658</button>
+              <a href='tel:6096225658' sx={{variant: 'buttons.3DAccent', py: 3, mt: 4}}> <FaPhone sx={{position: 'relative', top: '2px'}} />  Call us: (609) 622-5658</a>
             </div>
           </Box>
-          <Box sx={{width: ['full', '1/3'], display: ['none', 'block']}}>
+          {/* <Box sx={{width: ['full', '1/3'], display: ['none', 'block']}}>
             <div>
               <div>
                 <Styled.h2 sx={{color: 'white', textShadow: '2px 2px 2px rgba(0,0,0,.5)'}}>Contact Us</Styled.h2>
-                {/* <p>Please Contact Us Using the Form Below</p> */}
               </div>
 
               <iframe src='https://services.cognitoforms.com/f/xPoircp7HEGoNo_tpFEirg?id=156' style={{position: 'relative', minWidth: '100%', width: '100%'}} frameBorder='0' scrolling='yes' seamless='seamless' height='319' width='100%' />
               <script src='https://services.cognitoforms.com/scripts/embed.js' />
 
             </div>
-          </Box>
+          </Box> */}
         </Flex>
       </Container>
     </Box>

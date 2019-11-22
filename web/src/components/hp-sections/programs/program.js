@@ -14,7 +14,8 @@ const ProgramItem = ({name, icon = 'pineCone', iconSize = '3rem', description, l
         boxShadow: '0 0 12px -2px rgba(0,0,0,0.2)',
         transform: 'scale(1.1)',
         '.iconBg': {
-          bg: 'primary'
+          bg: 'accent',
+          color: 'primary'
         }
       }}}>
 
@@ -27,12 +28,12 @@ const ProgramItem = ({name, icon = 'pineCone', iconSize = '3rem', description, l
           borderRadius: '1000px',
           width: '6rem',
           height: '6rem',
-          bg: 'primaryLight',
+          bg: 'primary',
           border: '1px dashed red',
           borderColor: 'white',
           p: '1.5rem',
           mx: 'auto',
-          transition: 'background-color 0.5s ease-out'
+          transition: 'background-color 0.5s ease-out, color 0.5s ease-out'
         }}>
           <Icon symbol={icon} />
         </div>

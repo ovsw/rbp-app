@@ -3,6 +3,8 @@ import React from 'react' // eslint-disable-line
 import {jsx, Styled} from 'theme-ui'
 import {Box, Flex} from '@theme-ui/components'
 
+import {FaPhone} from 'react-icons/fa'
+
 // containers
 import SectionWithSidebar from '../../../containers/section-with-sidebar'
 // commponents
@@ -29,7 +31,7 @@ const Sidebar = () => {
           <li>Modified program available to preschoolers</li>
         </ul>
         <div sx={{textAlign: 'center', mt: 4}}>
-          <a href='tel:6096225658' sx={{variant: 'buttons.outline', display: 'inline-block'}}>Call Us: (609) 622-5658</a>
+          <a href='tel:6096225658' sx={{variant: 'buttons.3DAccent', display: 'inline-block'}}><FaPhone /> Call Us: (609) 622-5658</a>
         </div>
       </div>
     </>
