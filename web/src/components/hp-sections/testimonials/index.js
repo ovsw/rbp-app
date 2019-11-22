@@ -59,7 +59,7 @@ const TestimonialsSection = () => {
     // adaptiveHeight: true
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1200,
         settings: {
           slidesToShow: 3,
           infinite: true,
@@ -67,9 +67,17 @@ const TestimonialsSection = () => {
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 1024,
         settings: {
           slidesToShow: 2,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
           slidesToScroll: 1
           // initialSlide: 2
         }
@@ -108,7 +116,7 @@ const TestimonialsSection = () => {
     )
   }
   return (
-    <section sx={{variant: 'sections.hpSection'}}>
+    <section sx={{variant: 'sections.hpSection', py: [5, 5, 5, 6]}}>
       <Styled.h1 as='h2' sx={{textAlign: 'center', color: 'primary'}}>What Parents Say</Styled.h1>
       <Container sx={{maxWidth: '6xl'}}>
         <Slider {...settings}>
