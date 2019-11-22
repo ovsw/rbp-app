@@ -10,9 +10,12 @@ import SectionWithSidebar from '../../../containers/section-with-sidebar'
 // commponents
 import ProgramItem from './program'
 
+// images
+import SectionBg from '../../../images/activities-section-bg.png'
+
 const Programs = () => {
   return (
-    <section sx={{variant: 'sections.hpSection'}}>
+    <section sx={{variant: 'sections.hpSection', background: `url(${SectionBg}) repeat-x center center`, marginBottom: '-3rem'}}>
       <SectionWithSidebar sidebar={<Sidebar />} mainContent={<MainContent />} />
     </section>
   )

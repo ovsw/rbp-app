@@ -9,9 +9,13 @@ import {FaMap, FaPhone} from 'react-icons/fa'
 // containers
 import SectionWithSidebar from '../../containers/section-with-sidebar'
 
+// images
+import SectionBg from '../../images/white-torn-bg.png'
+// import SectionBg from '../../images/activities-section-bg.png'
+
 const TransportationSection = () => {
   return (
-    <section sx={{variant: 'sections.hpSectionLight'}}>
+    <section sx={{variant: 'sections.hpSectionLight', background: `url(${SectionBg}) repeat-x bottom center`, paddingBottom: '0', marginBottom: '-6rem', position: 'relative', zIndex: '10'}}>
       <SectionWithSidebar mainContent={<MainContent />} sidebar={<Sidebar />} />
     </section>
   )
