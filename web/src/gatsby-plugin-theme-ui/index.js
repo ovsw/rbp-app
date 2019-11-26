@@ -40,52 +40,18 @@ export default {
     '1280px',
     '1440px'
   ],
-  'colors': {
-    'text': '#6c6b73',
-    'background': '#fbf8ef',
-    'primary': '#5b9a42',
-    'secondary': '#8bcb6f',
-    'accent': '#f7db54',
-    'accentDark': '#c1aa1d',
-    'accentLight': '#ffff86',
-    'muted': '#efe9d7',
-    'primaryLight': '#8bcb6f',
-    'primaryDark': '#2b6b15',
-    'primaryHover': '#2b6b15',
-    'textMuted': '#9da2a0', // #8b8a90
-    // 'success': '#9ae6b4', // green
-    // 'info': '#63b3ed', // blue
-    // 'warning': '#faf089', //  yellow
-    // 'danger': '#feb2b2', // red
-    'white': '#fff',
-    'light': '#f7fafc',
-    'grayDark': '#2d3748',
-    'dark': '#2d3748',
-    'black': '#282828',
-    'transparent': 'transparent',
-    'gray': [
-      null,
-      '#f7fafc',
-      '#edf2f7',
-      '#e2e8f0',
-      '#cbd5e0',
-      '#a0aec0',
-      '#718096',
-      '#4a5568',
-      '#2d3748',
-      '#1a202c'
-    ]
-  },
   // 'colors': {
   //   'text': '#6c6b73',
   //   'background': '#fbf8ef',
-  //   'primary': '#008080',
-  //   'secondary': '#4cb0af',
+  //   'primary': '#5b9a42',
+  //   'secondary': '#8bcb6f',
   //   'accent': '#f7db54',
+  //   'accentDark': '#c1aa1d',
+  //   'accentLight': '#ffff86',
   //   'muted': '#efe9d7',
-  //   'primaryLight': '#4cb0af',
-  //   'primaryDark': '#005354',
-  //   'primaryHover': '#005354',
+  //   'primaryLight': '#8bcb6f',
+  //   'primaryDark': '#2b6b15',
+  //   'primaryHover': '#2b6b15',
   //   'textMuted': '#9da2a0', // #8b8a90
   //   // 'success': '#9ae6b4', // green
   //   // 'info': '#63b3ed', // blue
@@ -110,6 +76,40 @@ export default {
   //     '#1a202c'
   //   ]
   // },
+  'colors': {
+    'text': '#6c6b73',
+    'background': '#fbf8ef',
+    'primary': '#008080',
+    'secondary': '#4cb0af',
+    'accent': '#f7db54',
+    'muted': '#efe9d7',
+    'primaryLight': '#4cb0af',
+    'primaryDark': '#005354',
+    'primaryHover': '#005354',
+    'textMuted': '#9da2a0', // #8b8a90
+    // 'success': '#9ae6b4', // green
+    // 'info': '#63b3ed', // blue
+    // 'warning': '#faf089', //  yellow
+    // 'danger': '#feb2b2', // red
+    'white': '#fff',
+    'light': '#f7fafc',
+    'grayDark': '#2d3748',
+    'dark': '#2d3748',
+    'black': '#282828',
+    'transparent': 'transparent',
+    'gray': [
+      null,
+      '#f7fafc',
+      '#edf2f7',
+      '#e2e8f0',
+      '#cbd5e0',
+      '#a0aec0',
+      '#718096',
+      '#4a5568',
+      '#2d3748',
+      '#1a202c'
+    ]
+  },
   'fonts': {
     // 'sans': '-apple-system, BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"',
     // 'serif': 'Georgia, Cambria, "Times New Roman", Times, serif',
