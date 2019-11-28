@@ -7,10 +7,12 @@ import HeroVideoBg from './hero-video-bg'
 import {FaPhone} from 'react-icons/fa'
 
 import VideoPoster from '../../images/rambling-pines-camp-intro-video.jpg'
+import BigLogo from '../../images/rambling-pines-art-logo-test-4.png'
 
 const Hero = () => {
   return (
     <Box as='section' pt={[1, 2, 3, 6]} pb={[1, 2, 3, 6]} sx={{
+      textAlign: 'center',
       borderBottom: '1px solid lightgrey',
       position: 'relative',
       zIndex: '1',
@@ -40,41 +42,41 @@ const Hero = () => {
       }}>
         <HeroVideoBg poster='https://rbpvideo-ac97.kxcdn.com/rambling-pines-camp-intro-video.jpg' />
       </div>
-      <Container sx={{
+      <Container className='container' sx={{
         maxWidth: '5xl',
         position: 'relative',
-        zIndex: 10,
-        my: [3, 4, 4, 3, 5]
+        zIndex: 10
+        // my: [3, 4, 4, 3, 5]
         // bg: 'rgba(0,0,0,.32)'
       }}>
-        <Flex sx={{flexWrap: 'wrap', color: 'white'}}>
-          <Box sx={{width: ['full', '2/3']}}>
-            <div className='banner-info'>
-              <Styled.h1 sx={{
-                variant: 'text.caps',
-                color: 'white',
-                fontWeight: 'bold',
-                textShadow: '2px 2px 2px rgba(0,0,0,.5)',
-                fontSize: [5, 6],
-                mb: 4
-              }}>Welcome to Rambling Pines</Styled.h1>
-              <Styled.h2 sx={{color: 'white', textShadow: '2px 2px 2px rgba(0,0,0,.5)', fontSize: [2, 3, 5]}} >A Summer Day Camp <span>Like no Other.</span></Styled.h2>
-              <p sx={{textShadow: '1px 1px 2px rgba(0,0,0,.5)', fontSize: [1, 2]}}><span sx={{fontWeight: 'bold'}}>Your kids deserve the best.</span> <br />The best supervision, the best activities, the best friends, the best memories. </p>
-              <a href='tel:6096225658' sx={{variant: 'buttons.3DAccent', py: 3, mt: 4}}> <FaPhone sx={{position: 'relative', top: '2px'}} />  Call us: (609) 622-5658</a>
-            </div>
-          </Box>
-          {/* <Box sx={{width: ['full', '1/3'], display: ['none', 'block']}}>
-            <div>
-              <div>
-                <Styled.h2 sx={{color: 'white', textShadow: '2px 2px 2px rgba(0,0,0,.5)'}}>Contact Us</Styled.h2>
-              </div>
+        <img src={BigLogo} alt='Rambling Pines Big Logo' />
+        <Styled.h1 sx={{
+          textTransform: 'lowercase',
+          color: 'white',
+          fontWeight: 'normal',
+          textShadow: '2px 2px 2px rgba(0,0,0,.5)',
+          fontSize: [3, 4],
+          fontFamily: 'Lato',
 
-              <iframe src='https://services.cognitoforms.com/f/xPoircp7HEGoNo_tpFEirg?id=156' style={{position: 'relative', minWidth: '100%', width: '100%'}} frameBorder='0' scrolling='yes' seamless='seamless' height='319' width='100%' />
-              <script src='https://services.cognitoforms.com/scripts/embed.js' />
-
-            </div>
-          </Box> */}
-        </Flex>
+          mb: 0
+        }}>A Summer Day Camp Like no Other.</Styled.h1>
+        <p sx={{
+          textShadow: '1px 1px 2px rgba(0,0,0,.5)',
+          fontSize: [1, 2],
+          color: 'light',
+          fontFamily: 'Dosis',
+          fontWeight: 'light',
+          mt: 0
+        }}>Your kids deserve the best.The best supervision, the best activities, the best friends, the best memories. </p>
+        <a href='tel:6096225658' sx={{
+          variant: 'buttons.3DAccent',
+          display: 'inline-block',
+          py: 3,
+          mt: 4
+        }}>
+          <FaPhone sx={{position: 'relative', top: '2px'}} />
+          Call us: (609) 622-5658
+        </a>
       </Container>
     </Box>
   )
