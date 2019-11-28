@@ -24,7 +24,7 @@ const MainContent = () => {
       foodImage: file(relativePath: { eq: "lunch-time-illustration.png" }) {
         childImageSharp {
           fluid(maxWidth: 726) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }

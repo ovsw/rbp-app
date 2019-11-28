@@ -28,7 +28,7 @@ const MainContent = () => {
       transportationImage: file(relativePath: { eq: "transportation-illustration.png" }) {
         childImageSharp {
           fluid(maxWidth: 726) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }
