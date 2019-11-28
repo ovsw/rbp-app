@@ -15,8 +15,8 @@ import headerBgImage from '../../images/bg-header-tiled-4.png'
 const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => {
   const {siteNav} = useSiteMetadata()
   return (
-    <ThemeHeader sx={{background: `url(${headerBgImage}) repeat-x bottom left`, paddingBottom: '40px', mb: '-55px'}}>
-      <Container className='HeaderContainer' sx={{pt: 2, pb: 0}}>
+    <ThemeHeader sx={{background: `url(${headerBgImage}) repeat-x bottom left`, pb: '20px', mb: '-55px'}}>
+      <Container className='HeaderContainer' sx={{pt: 3, pb: 0}}>
         <TopBar />
         <Flex sx={{position: ['static', 'relative'], justifyContent: 'space-between'}} className='MainNav'>
           <Box sx={{flex: 'flex: 1 1 0%'}}>

@@ -56,8 +56,8 @@ const MainNav = ({navStructure, showNav}) => {
         <Flex as='ul' sx={{
           variant: 'lists.reset',
           m: 0,
-          pt: [3, 3, 2],
-          pb: [4, 4, 2],
+          pt: [3, 3, 3],
+          pb: [4, 4, 3],
           px: 0,
           display: ['block', 'block', 'flex'],
           justifyContent: 'flex-end'
@@ -75,7 +75,7 @@ const MainNav = ({navStructure, showNav}) => {
                       position: 'absolute',
                       left: '100px',
                       marginLeft: '-100px',
-                      top: '-30px',
+                      top: '-45px',
                       textAlign: 'center'}}>
                       <img src={LogoImage} sx={{
                         width: '150px'
