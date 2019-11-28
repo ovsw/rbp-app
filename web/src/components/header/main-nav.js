@@ -71,14 +71,15 @@ const MainNav = ({navStructure, showNav}) => {
                     position: 'relative',
                     display: ['none', 'none', 'block']
                   }}>
-                    <Link to='/'>
+                    <Link to='/' sx={{display: 'block',
+                      position: 'absolute',
+                      left: '100px',
+                      marginLeft: '-100px',
+                      top: '-30px',
+                      textAlign: 'center'}}>
                       <img src={LogoImage} sx={{
-                        position: 'absolute',
-                        width: '160px',
-                        left: '50%',
-                        marginLeft: '-75px',
-                        top: '-65px'
-                      }} />
+                        width: '150px'
+                      }} alt='Rambling Pines Logo' />
                     </Link></li>
                   <MegaMenu menuTitle={mainMenuItem.title} mainLink={mainMenuItem.slug} menuColumns={mainMenuItem.children} key={mainMenuItem.slug} />
                 </React.Fragment>

@@ -10,7 +10,7 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
 // images
-import SectionBg from '../../../images/nature-bg.png'
+import SectionBg from '../../../images/img-bg-2.png'
 
 function NextArrow (props) {
   const {className, style, onClick} = props
@@ -107,7 +107,7 @@ const TestimonialsSection = () => {
           fontSize: '1rem',
           lineHeight: '1.5rem',
           bg: 'primaryLight',
-          color: 'dark',
+          color: 'light',
           borderRadius: '100%',
           '.slick-active & ': {
             bg: 'accent',
@@ -124,12 +124,12 @@ const TestimonialsSection = () => {
     <section sx={{
       variant: 'sections.hpSection',
       py: [5, 5, 5, 6],
-      background: `url(${SectionBg}) repeat-x center center`,
+      background: `url(${SectionBg}) repeat-x bottom left`,
       marginBottom: '-3rem',
       position: 'relative',
       zIndex: '2'
     }}>
-      <Styled.h1 as='h2' sx={{textAlign: 'center', color: 'light'}}>What Parents Say</Styled.h1>
+      <Styled.h1 as='h2' sx={{textAlign: 'center'}}>What Parents Say</Styled.h1>
       <Container sx={{maxWidth: '6xl'}}>
         <Slider {...settings}>
           {testimonialsContentTemp.map(testimonial => <TestimonialItem {...testimonial} key={testimonial.name} />)}

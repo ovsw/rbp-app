@@ -11,7 +11,7 @@ import BigLogo from '../../images/rambling-pines-art-logo-test-4.png'
 
 const Hero = () => {
   return (
-    <Box as='section' pt={[1, 2, 3, 6]} pb={[1, 2, 3, 6]} sx={{
+    <Box as='section' pt={[3, 4, 4, 6]} pb={[2, 3, 4, 6]} sx={{
       textAlign: 'center',
       borderBottom: '1px solid lightgrey',
       position: 'relative',

@@ -10,13 +10,13 @@ import Icon from '../icon'
 import TopBar from './top-bar'
 import MainNav from './main-nav'
 
-import headerBgImage from '../../images/bg-header-tiled-3.png'
+import headerBgImage from '../../images/bg-header-tiled-4.png'
 
 const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => {
   const {siteNav} = useSiteMetadata()
   return (
     <ThemeHeader sx={{background: `url(${headerBgImage}) repeat-x bottom left`, paddingBottom: '40px', mb: '-55px'}}>
-      <Container >
+      <Container className='HeaderContainer' sx={{pt: 2, pb: 0}}>
         <TopBar />
         <Flex sx={{position: ['static', 'relative'], justifyContent: 'space-between'}} className='MainNav'>
           <Box sx={{flex: 'flex: 1 1 0%'}}>
