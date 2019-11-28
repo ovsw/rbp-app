@@ -21,7 +21,7 @@ class Megamenu extends React.Component {
     this.hideMenu = () => {
       this.menuTimeout = setTimeout(() => {
         this.setState({megaMenuVisible: false})
-      }, 50)
+      }, 150)
     }
 
     this.onNavClick = () => {
@@ -37,11 +37,7 @@ class Megamenu extends React.Component {
     const {menuTitle, mainLink, menuColumns} = this.props
     const {megaMenuVisible} = this.state
     return (
-      <li sx={{
-        mx: 4,
-        borderBottom: '2px solid',
-        color: 'primary'
-      }}>
+      <li sx={{mx: 4}}>
         <NavLink
           onTouchStart={this.toggleMegaMenu}
           onMouseEnter={this.showMenu}
@@ -53,7 +49,7 @@ class Megamenu extends React.Component {
             variant: 'links.navMain'
           }}
         >
-          {menuTitle}
+          <span>{menuTitle}</span>
         </NavLink>
         <div
           onMouseEnter={this.showMenu}
@@ -61,7 +57,7 @@ class Megamenu extends React.Component {
           sx={{
             display: megaMenuVisible ? 'block' : 'none',
             position: 'absolute',
-            top: '3.2rem',
+            top: '4.2rem',
             textAlign: 'left',
             bg: 'primary',
             color: 'white',

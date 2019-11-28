@@ -57,8 +57,8 @@ const MainNav = ({navStructure, showNav}) => {
           variant: 'lists.reset',
           m: 0,
           pt: [3, 3, 3],
-          pb: [4, 4, 3],
-          px: 0,
+          pb: [4, 4, 1],
+          px: [0, 0, 0, 2, 3],
           display: ['block', 'block', 'flex'],
           justifyContent: 'flex-end'
         }}>
@@ -71,11 +71,13 @@ const MainNav = ({navStructure, showNav}) => {
                     position: 'relative',
                     display: ['none', 'none', 'block']
                   }}>
-                    <Link to='/' sx={{display: 'block',
+                    <Link to='/' sx={{
+                      display: 'block',
                       position: 'absolute',
+                      width: '100%',
                       left: '100px',
                       marginLeft: '-100px',
-                      top: '-45px',
+                      top: '-50px',
                       textAlign: 'center'}}>
                       <img src={LogoImage} sx={{
                         width: '150px'

@@ -14,7 +14,7 @@ const TopBar = () => {
           textAlign: 'right',
           pr: 5,
           '& a': {
-            mr: 4
+            mr: 3
           }
         }}>
           <Link to='/dates-and-rates/' sx={{variant: 'links.topBar'}}>Dates &amp; Rates</Link>

@@ -576,28 +576,98 @@ export default {
     },
     topBar: {
       'display': 'inline-block',
+      p: 2,
       'fontWeight': 'bold',
       'textTransform': 'uppercase',
-      'color': 'dark',
+      'color': 'primary',
       'textDecoration': 'none',
-      fontSize: '1'
+      fontSize: '13px',
+      '&:hover': {
+        color: 'accent',
+        bg: 'primary'
+      }
     },
     navMain: {
-      'display': 'inline-block',
-      'fontWeight': 'bold',
-      'textTransform': 'uppercase',
-      'color': 'primaryDark',
-      'textDecoration': 'none',
-      pt: 2,
-      pb: 2,
-      px: 2
+      color: 'black',
+      letterSpacing: '0.05rem',
+      fontSize: '17px',
+      p: '10px',
+      position: 'relative',
+      overflow: 'hidden',
+      display: 'inline-block',
+      transition: '.3s ease-out .1s',
+      textTransform: 'uppercase',
+      textDecoration: 'none',
+      fontWeight: 'bold',
+      '& span': {
+        '&::before': {
+          width: '100%',
+          height: '2px',
+          background: '#4cb0af',
+          content: '""',
+          position: 'absolute',
+          left: '0',
+          top: '0',
+          transition: '.3s',
+          transform: 'translateX(-100%)'
+        },
+        '&::after': {
+          width: '30px',
+          height: '4px',
+          borderRadius: '999px',
+          background: '#4cb0af',
+          content: '""',
+          position: 'absolute',
+          left: '50%',
+          bottom: '0',
+          transition: '.3s',
+          transform: 'translateX(-50%)'
+        }
+      },
+      '&::before': {
+        width: '2px',
+        height: '100%',
+        background: '#4cb0af',
+        content: '""',
+        position: 'absolute',
+        left: '0',
+        top: '0',
+        transition: '.3s',
+        transform: 'translateY(-100%)'
+      },
+      '&::after': {
+        width: '2px',
+        height: '100%',
+        background: '#4cb0af',
+        content: '""',
+        position: 'absolute',
+        right: '0',
+        bottom: '0',
+        transition: '.3s',
+        transform: 'translateY(100%)'
+      },
+      '&:hover': {
+        '&::before, &::after': {
+          transform: 'translateX(0)'
+        },
+        '& span': {
+          '&::before': {
+            transform: 'translateY(0)'
+          },
+          '&::after': {
+            transform: 'translateY(0)',
+            width: '100%',
+            left: '0'
+          }
+        }
+      }
     },
     'navSub': {
-      color: 'gray.3',
+      color: 'light',
       textDecoration: 'none',
       textTransform: 'uppercase',
       fontSize: '1',
-      fontWeight: 'bold',
+      letterSpacing: '0.01rem',
       '&:hover': {
         color: 'accent',
         textDecoration: 'underline'
