@@ -6,3 +6,8 @@
 
 # lerna files
 /lerna-debug.log
+
+
+/web/src/images/*-u.*
+/web/src/images/*test*.*
+/web/src/images/*orig*.*
