@@ -71,7 +71,7 @@ const PageSidebar = ({section}) => {
         {sideMenuItems.map(menuItem => (
           <li key={menuItem.slug} sx={{
             borderBottom: '1px solid',
-            borderBottomColor: 'gray.4'
+            borderBottomColor: 'gray.3'
           }}>
             <Navlink to={menuItem.slug} activeClass='active' sx={{variant: 'links.sidebarNav'}} partiallyActive>{menuItem.title}</Navlink>
             { menuItem.children.length > 0 &&
@@ -79,7 +79,7 @@ const PageSidebar = ({section}) => {
               {menuItem.children.map(childItem => (
                 <li key={childItem.slug} sx={{
                   borderTop: '1px solid',
-                  borderTopColor: 'gray.4',
+                  borderTopColor: 'gray.3',
                   '&::marker': {
                     content: '"\\2022"',
                     color: 'primaryLight'
