@@ -82,6 +82,8 @@ export default {
     'primary': '#008080',
     'secondary': '#4cb0af',
     'accent': '#f7db54',
+    'accentDark': '#c1aa1d',
+    'accentLight': '#ffff86',
     'muted': '#efe9d7',
     'primaryLight': '#4cb0af',
     'primaryDark': '#005354',
