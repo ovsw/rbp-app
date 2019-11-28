@@ -8,7 +8,7 @@ import SocialLinks from './socialLinks'
 
 // images
 import AcaLogoImg from '../images/aca-logo.png'
-import FooterBg from '../images/footer-bg-1.jpg'
+import FooterBg from '../images/footer-bg-2.jpg'
 
 const Footer = () => {
   return (
@@ -19,11 +19,11 @@ const Footer = () => {
             <div className='vcard'>
               <div className='org'><Styled.h3 as='h3' sx={{mt: 0, color: 'light'}}>Rambling Pines Day Camp</Styled.h3></div>
               <div className='tel'>
-              Call Now <Styled.a href='tel:609-466-1212'>(609) 466-1212</Styled.a>
+              Call Now <a sx={{variant: 'links.footerLinks'}} href='tel:609-466-1212'>(609) 466-1212</a>
                 <br />
-              Vendors: <Styled.a href='tel:609-466-1212'>(609) 466-1212</Styled.a>
+              Vendors: <a sx={{variant: 'links.footerLinks'}} href='tel:609-466-1212'>(609) 466-1212</a>
               </div>
-              <Styled.a className='email' href='mailto:campinfo@ramblingpines.com'>campinfo@ramblingpines.com</Styled.a>
+              <a className='email' sx={{variant: 'links.footerLinks'}} href='mailto:campinfo@ramblingpines.com'>campinfo@ramblingpines.com</a>
               <div className='adr' sx={{mt: 4}}>
                 <div className='street-address'>174 Lambertville Hopewell Rd.</div>
                 <span className='locality'>Hopewell</span>,{' '}

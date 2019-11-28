@@ -79,7 +79,7 @@ class Megamenu extends React.Component {
                   borderWidth: 0,
                   borderLeftWidth: '1px',
                   borderStyle: 'dashed',
-                  borderLeftColor: 'gray.6',
+                  borderLeftColor: 'gray.5',
                   pl: 4
                 }
               }}>

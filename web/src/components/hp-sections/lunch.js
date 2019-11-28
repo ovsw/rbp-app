@@ -42,7 +42,7 @@ const MainContent = () => {
 
 const Sidebar = () => {
   return (
-    <>
+    <div sx={{p: {lineHeight: 'snug'}}}>
       <Styled.h1 as='h2'>Lunch Provided</Styled.h1>
       <p>To make your life a little bit easier, a nutritious and delicious lunch is provided daily. </p>
       <p>A vegetarian option is always available. Little ones get a morning snack and everyone enjoys an afternoon snack of ice cream or ice pops.</p>
@@ -50,7 +50,7 @@ const Sidebar = () => {
         <FaHamburger sx={{position: 'absolute', top: '0.7rem', left: '1rem', fontSize: 4}} /> Sample Lunch Menu
       </Link>
       <a href='tel:6096225658' sx={{variant: 'buttons.3DAccent', display: 'inline-block'}}><FaPhone /> Call Us: (609) 622-5658</a>
-    </>
+    </div>
   )
 }
 

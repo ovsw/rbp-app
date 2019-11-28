@@ -39,7 +39,7 @@ const PageSidebar = ({section}) => {
         borderBottomColor: 'gray.5',
         pl: [3, 3, 0],
         bg: ['primary', 'primary', 'transparent'],
-        cursor: 'pointer'
+        cursor: ['pointer', 'pointer', 'auto']
       }}>
         <h4 sx={{
           m: 0,

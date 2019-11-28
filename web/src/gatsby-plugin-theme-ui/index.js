@@ -288,7 +288,8 @@ export default {
       }
     },
     'p': {
-      fontSize: 2
+      fontSize: 2,
+      lineHeight: 'body'
     },
     'h1': {
       ...sharedHeadingStyles,
@@ -596,14 +597,21 @@ export default {
       textDecoration: 'none',
       textTransform: 'uppercase',
       fontSize: '1',
-      fontWeight: 'bold'
+      fontWeight: 'bold',
+      '&:hover': {
+        color: 'accent',
+        textDecoration: 'underline'
+      }
     },
     'navSub2': {
       color: 'gray.3',
       textDecoration: 'none',
       textTransform: 'uppercase',
       fontSize: '1',
-      fontWeight: 'bold'
+      fontWeight: 'bold',
+      '&:hover': {
+        color: 'accent'
+      }
     },
     'sidebarNav': {
       color: 'dark',
@@ -615,13 +623,11 @@ export default {
       py: 2,
       px: 2,
       '&.active': {
-        bg: 'primary',
-        color: 'white',
-        fontWeight: 'bold'
+        color: 'primary',
+        fontWeight: 'extrabold'
       },
       '&:hover': {
-        bg: 'primary',
-        color: 'white'
+        textDecoration: 'underline'
       }
     },
     'programListLink': {
@@ -639,6 +645,9 @@ export default {
       '& p': {
         color: 'text'
       }
+    },
+    footerLinks: {
+      color: 'accent'
     }
   },
   lists: {
