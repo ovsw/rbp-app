@@ -10,7 +10,7 @@ import Icon from '../icon'
 import TopBar from './top-bar'
 import MainNav from './main-nav'
 
-import headerBgImage from '../../images/bg-header-tiled.png'
+import headerBgImage from '../../images/bg-header-tiled-3.png'
 
 const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => {
   const {siteNav} = useSiteMetadata()
