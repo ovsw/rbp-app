@@ -67,7 +67,7 @@ const Hero = () => {
           fontFamily: 'Dosis',
           fontWeight: 'light',
           mt: 0
-        }}>Your kids deserve the best.The best supervision, the best activities, the best friends, the best memories. </p>
+        }}>Your kids deserve the best. The best supervision, the best activities, the best friends, the best memories. </p>
         <a href='tel:6096225658' sx={{
           variant: 'buttons.3DAccent',
           display: 'inline-block',
