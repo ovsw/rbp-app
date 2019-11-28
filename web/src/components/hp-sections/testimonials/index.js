@@ -106,13 +106,13 @@ const TestimonialsSection = () => {
           height: '1.5rem',
           fontSize: '1rem',
           lineHeight: '1.5rem',
-          bg: 'primaryLight',
+          bg: 'primary',
           color: 'light',
           borderRadius: '100%',
           '.slick-active & ': {
             bg: 'accent',
             color: 'primaryDark',
-            boxShadow: '0 0 6px white'
+            boxShadow: '0 0 6px #008080'
           }
         }}
       >
