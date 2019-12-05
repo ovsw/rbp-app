@@ -5,17 +5,24 @@ import {Link} from 'gatsby'
 
 import Icon from '../../icon'
 
+import WhitePaper from '../../../images/white-paper-bg2.jpg'
+
 const ProgramItem = ({name, icon = 'pineCone', iconSize = '3rem', description, link}) => {
   return (
     <Link to={link} sx={{variant: 'links.programListLink',
       transition: 'transform 0.1s ease-out',
       boxShadow: '0 0 12px -2px rgba(0,0,0,0.1)',
+      background: `url(${WhitePaper})`,
+      borderRadius: '7px',
       '&:hover': {
         boxShadow: '0 0 12px -2px rgba(0,0,0,0.2)',
         transform: 'scale(1.1)',
         '.iconBg': {
           bg: 'accent',
-          color: 'primary'
+          color: 'primary',
+          'svg': {
+            transform: 'scale(1.9)'
+          }
         }
       }}}>
 
@@ -33,7 +40,7 @@ const ProgramItem = ({name, icon = 'pineCone', iconSize = '3rem', description, l
           borderColor: 'white',
           p: '1.5rem',
           mx: 'auto',
-          transition: 'background-color 0.5s ease-out, color 0.5s ease-out'
+          transition: 'all 0.1s ease-out'
         }}>
           <Icon symbol={icon} />
         </div>
