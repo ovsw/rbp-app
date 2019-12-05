@@ -11,11 +11,14 @@ import SectionWithSidebar from '../../../containers/section-with-sidebar'
 import ProgramItem from './program'
 
 // images
-import SectionBg from '../../../images/activities-section-bg.png'
+import SectionBg from '../../../images/yellow-paper-bg.jpg'
 
 const Programs = () => {
   return (
-    <section sx={{variant: 'sections.hpSection', background: `url(${SectionBg}) repeat-x center center`, marginBottom: '-3rem'}}>
+    <section sx={{
+      variant: 'sections.hpSection',
+      background: `url(${SectionBg}) repeat center center`
+    }}>
       <SectionWithSidebar sidebar={<Sidebar />} mainContent={<MainContent />} />
     </section>
   )

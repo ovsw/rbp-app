@@ -733,7 +733,8 @@ export default {
       bg: 'background'
     },
     hpSectionLight: {
-      py: [3, 4, 5, 6],
+      pt: [3, 4, 5, 6],
+      pb: [3, 4, 5, 6],
       bg: 'white'
     }
   }

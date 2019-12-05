@@ -15,7 +15,8 @@ const SectionWithLeftSidebar = ({sidebar = <p>no sidebar</p>, mainContent = <p>n
         <Box sx={{
           width: ['full', 'full', '2/3'],
           order: leftSidebar ? '1' : '2',
-          mt: [5, 5, 0]
+          mt: [5, 5, 0],
+          px: 2
         }}>
           {mainContent}
         </Box>
