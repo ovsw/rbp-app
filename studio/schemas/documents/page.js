@@ -60,6 +60,11 @@ export default {
       }
     },
     {
+      name: 'headerImage',
+      title: 'Header Image',
+      type: 'mainImage'
+    },
+    {
       name: 'body',
       title: 'Body',
       type: 'bodyPortableText'

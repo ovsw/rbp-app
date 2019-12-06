@@ -1,7 +1,10 @@
+import {IoIosImage} from 'react-icons/io'
+
 export default {
   name: 'mainImage',
   type: 'image',
   title: 'Image',
+  icon: IoIosImage,
   options: {
     hotspot: true
   },
