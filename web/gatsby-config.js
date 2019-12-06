@@ -170,7 +170,7 @@ module.exports = {
             children: [
               {
                 title: 'Lunch Menu',
-                slug: 'lunch-menu',
+                slug: '/lunch-menu',
                 children: []
               },
               {
