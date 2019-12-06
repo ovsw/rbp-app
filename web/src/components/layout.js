@@ -31,7 +31,7 @@ const Layout = ({children, onHideNav, onShowNav, showNav, siteTitle}) => (
     })} />
     <Header siteTitle={siteTitle} onHideNav={onHideNav} onShowNav={onShowNav} showNav={showNav} />
 
-    <div>{children}</div>
+    <>{children}</>
 
     <Footer />
   </ThemeLayout>

@@ -57,7 +57,7 @@ class Megamenu extends React.Component {
           sx={{
             display: megaMenuVisible ? 'block' : 'none',
             position: 'absolute',
-            top: '4.2rem',
+            top: '3.2rem',
             textAlign: 'left',
             bg: 'primary',
             color: 'white',

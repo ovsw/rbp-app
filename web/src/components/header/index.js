@@ -10,12 +10,19 @@ import Icon from '../icon'
 import TopBar from './top-bar'
 import MainNav from './main-nav'
 
-import headerBgImage from '../../images/bg-header-tiled-4.png'
+import headerBgImage from '../../images/white-paper-bg2.jpg'
 
 const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => {
   const {siteNav} = useSiteMetadata()
   return (
-    <ThemeHeader sx={{background: `url(${headerBgImage}) repeat-x bottom left`, pb: '20px', mb: '-16px'}}>
+    <ThemeHeader sx={{
+      background: `url(${headerBgImage}) repeat bottom left`,
+      pb: 2,
+      position: 'fixed',
+      width: '100%',
+      zIndex: 9999,
+      boxShadow: '0 3px 12px rgba(0,0,0,0.3)'
+    }}>
       <Container className='HeaderContainer' sx={{pt: 3, pb: 0}}>
         <TopBar />
         <Flex sx={{position: ['static', 'relative'], justifyContent: 'space-between'}} className='MainNav'>
