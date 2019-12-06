@@ -19,7 +19,7 @@ const TopBar = () => {
         }}>
           <Link to='/dates-and-rates/' sx={{variant: 'links.topBar'}}>Dates &amp; Rates</Link>
           {/* <Link to='/'>Schedule Tour</Link> */}
-          <Link to='/request-info/' sx={{variant: 'links.topBar'}}>Request Info</Link>
+          <Link to='/interactive-map/' sx={{variant: 'links.topBar'}}>Interactive Map</Link>
         </Box>
         <Box sx={{
           width: '1/2',
@@ -28,8 +28,8 @@ const TopBar = () => {
             ml: 4
           }
         }}>
-          <a href='https://ramblingpines.campintouch.com/ui/forms/application/camper/App' sx={{variant: 'links.topBar'}} rel='noopener noreferrer' target='_blank'>Enroll Now</a>
-          <a href='https://ramblingpines.campintouch.com/v2/login.aspx' rel='noopener noreferrer' sx={{variant: 'links.topBar'}}target='_blank'>Parent Login</a>
+          <Link to='/request-info/' sx={{variant: 'links.topBar'}} rel='noopener noreferrer' target='_blank'>Request Info</Link>
+          <a href='https://ramblingpines.campintouch.com/ui/forms/application/camper/App' rel='noopener noreferrer' sx={{variant: 'links.topBar'}}target='_blank'>Enroll Now</a>
         </Box>
       </Flex>
     </div>

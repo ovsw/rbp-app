@@ -82,6 +82,11 @@ module.exports = {
                 children: []
               },
               {
+                title: 'Lunch',
+                slug: '/lunch/',
+                children: []
+              },
+              {
                 title: 'Beforecare & Aftercare',
                 slug: '/beforecare-aftercare/',
                 children: []
@@ -104,6 +109,11 @@ module.exports = {
               {
                 title: 'FAQs',
                 slug: '/faqs/',
+                children: []
+              },
+              {
+                title: 'New for 2020',
+                slug: '/new-for-2020/',
                 children: []
               }
             ]
@@ -159,6 +169,11 @@ module.exports = {
             title: 'column 1',
             children: [
               {
+                title: 'Lunch Menu',
+                slug: 'lunch-menu',
+                children: []
+              },
+              {
                 title: 'Camper Photo App',
                 slug: '/camper-photo-app/',
                 children: []
@@ -175,7 +190,7 @@ module.exports = {
             children: [
               {
                 title: 'New for 2020',
-                slug: '/lunch-menu/',
+                slug: '/new-for-2020/',
                 children: []
               },
               {

@@ -20,8 +20,6 @@ const Footer = () => {
               <div className='org'><Styled.h3 as='h3' sx={{mt: 0, color: 'light'}}>Rambling Pines Day Camp</Styled.h3></div>
               <div className='tel'>
               Call Now <a sx={{variant: 'links.footerLinks'}} href='tel:609-466-1212'>(609) 466-1212</a>
-                <br />
-              Vendors: <a sx={{variant: 'links.footerLinks'}} href='tel:609-466-1212'>(609) 466-1212</a>
               </div>
               <a className='email' sx={{variant: 'links.footerLinks'}} href='mailto:campinfo@ramblingpines.com'>campinfo@ramblingpines.com</a>
               <div className='adr' sx={{mt: 4}}>

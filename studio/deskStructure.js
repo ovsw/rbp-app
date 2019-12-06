@@ -98,6 +98,10 @@ export default () =>
                         .title('Transportation')
                         .schemaType('page'),
                       S.documentListItem()
+                        .id('Lunch')
+                        .title('Lunch')
+                        .schemaType('page'),
+                      S.documentListItem()
                         .id('beforeAfterCare')
                         .title('Before & After Care')
                         .schemaType('page'),
@@ -175,12 +179,16 @@ export default () =>
                       S.documentListItem()
                         .id('referAFamily')
                         .title('Refer a Family')
+                        .schemaType('page'),
+                      S.documentListItem()
+                        .id('newthisyear')
+                        .title('New for 2020')
                         .schemaType('page')
                     ])
                 ),
               S.documentListItem()
                 .id('requestInfo')
-                .title('requestInfo')
+                .title('Request Info')
                 .schemaType('page')
             ])),
       S.listItem()

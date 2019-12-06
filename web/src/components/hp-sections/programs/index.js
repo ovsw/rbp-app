@@ -36,7 +36,7 @@ const Sidebar = () => {
         <li>Modified program available to preschoolers</li>
       </ul>
       <div sx={{textAlign: 'center', mt: 4}}>
-        <a href='tel:6096225658' sx={{variant: 'buttons.3DAccent', display: 'inline-block'}}><FaPhone /> Call Us: (609) 622-5658</a>
+        <a href='tel:6094661212' sx={{variant: 'buttons.3DAccent', display: 'inline-block'}}><FaPhone /> Call Us: (609) 466-1212</a>
       </div>
     </>
   )
