@@ -37,6 +37,7 @@ function PrevArrow (props) {
       // style={{...style}}
       className={className}
       sx={{
+        right: '-1rem',
         '&::before': {
           fontSize: '2rem',
           color: 'primary'
@@ -96,7 +97,7 @@ const TestimonialsSection = () => {
     appendDots: dots => (
       <div>
         <ul style={{
-          position: 'relative', top: '50px'}}> {dots} </ul>
+          position: 'relative', top: '50px', padding: '0'}}> {dots} </ul>
       </div>
     ),
     customPaging: i => (
@@ -124,13 +125,14 @@ const TestimonialsSection = () => {
     <section sx={{
       variant: 'sections.hpSection',
       py: [5, 5, 5, 6],
+      pb: [6, 5, 5, 6],
       background: `url(${SectionBg}) repeat-x bottom left`,
       marginBottom: '-3rem',
       position: 'relative',
       zIndex: '2'
     }}>
       <Styled.h1 as='h2' sx={{textAlign: 'center'}}>What Parents Say</Styled.h1>
-      <Container sx={{maxWidth: '6xl'}}>
+      <Container sx={{maxWidth: '6xl', px: ['2.8rem', 5, 0]}}>
         <Slider {...settings}>
           {testimonialsContentTemp.map(testimonial => <TestimonialItem {...testimonial} key={testimonial.name} />)}
         </Slider>

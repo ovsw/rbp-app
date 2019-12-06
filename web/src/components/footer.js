@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     <ThemeFooter sx={{display: 'block', background: `url(${FooterBg}) repeat-x center center`, color: 'textMuted'}}>
       <Container>
-        <Flex sx={{flexWrap: 'wrap', py: [3, 4, 5, 6]}}>
+        <Flex sx={{flexWrap: 'wrap', py: [4, 4, 5, 6]}}>
           <Box sx={{width: ['full', '1/2'], px: [0, 4], py: [4, 0], textAlign: ['center', 'right'], borderRight: ['none', '1px solid lightgray']}}>
             <div className='vcard'>
               <div className='org'><Styled.h3 as='h3' sx={{mt: 0, color: 'light'}}>Rambling Pines Day Camp</Styled.h3></div>
