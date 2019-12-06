@@ -9,7 +9,6 @@ import PortableText from './portableText'
 import PageSideNav from './generic-page-side-nav'
 
 function GenericPage ({_rawBody, title, section, headerImage = null}) {
-  console.log(headerImage)
   return (
     <>
       {headerImage && headerImage && (
