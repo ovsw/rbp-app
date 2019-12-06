@@ -2,6 +2,9 @@
 
 // import {relative} from 'path'
 
+import SectionBorderTop from '../images/torn-bg-white-t.png'
+import SectionBorderBottom from '../images/torn-bg-white-b.png'
+
 const sharedButtonStyles = {
   'py': 3,
   'px': 3,
@@ -733,8 +736,43 @@ export default {
       bg: 'background'
     },
     hpSectionLight: {
-      py: [3, 4, 5, 6],
-      bg: 'white'
+      py: [3, 4, 4, 5],
+      bg: 'white',
+      position: 'relative',
+      zIndex: '10',
+      '&::before': {
+        background: `url(${SectionBorderTop}) repeat-x top center`,
+        content: '""',
+        position: 'absolute',
+        top: '-40px',
+        left: 0,
+        right: 0,
+        height: '43px'
+      },
+      '&::after': {
+        background: `url(${SectionBorderBottom}) repeat-x bottom center`,
+        content: '""',
+        position: 'absolute',
+        bottom: '-40px',
+        left: 0,
+        right: 0,
+        height: '43px'
+      }
+    },
+    hpSectionLightNoBottom: {
+      py: [3, 4, 4, 5],
+      bg: 'white',
+      position: 'relative',
+      zIndex: '10',
+      '&::before': {
+        background: `url(${SectionBorderTop}) repeat-x top center`,
+        content: '""',
+        position: 'absolute',
+        top: '-40px',
+        left: 0,
+        right: 0,
+        height: '43px'
+      }
     }
   }
 }

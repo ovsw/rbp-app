@@ -11,7 +11,7 @@ import SectionWithSidebar from '../../containers/section-with-sidebar'
 
 const FoodSection = () => {
   return (
-    <section sx={{variant: 'sections.hpSectionLight'}}>
+    <section sx={{variant: 'sections.hpSectionLightNoBottom'}}>
       <SectionWithSidebar leftSidebar mainContent={<MainContent />} sidebar={<Sidebar />} />
     </section>
   )
