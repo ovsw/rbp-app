@@ -31,6 +31,33 @@ const GenericPageTemplate = props => {
 export default GenericPageTemplate
 
 export const query = graphql`
+
+  fragment SanityImageMeta on SanityMainImage {
+    crop {
+      _key
+      _type
+      top
+      bottom
+      left
+      right
+    }
+    hotspot {
+      _key
+      _type
+      x
+      y
+      height
+      width
+    }
+    asset {
+      _id
+      metadata {
+        lqip
+      }
+    }
+  }
+
+
   query GenericPageTemplateQuery($id: String!) {
     page: sanityPage(id: {eq: $id}) {
       id
@@ -41,6 +68,20 @@ export const query = graphql`
         current
       }
       section
+      headerImage {
+        asset {
+          mobileImage: fluid(maxWidth: 400) {
+            ...GatsbySanityImageFluid
+          }
+          tabletImage: fluid(maxWidth: 700) {
+            ...GatsbySanityImageFluid
+          }
+          desktopImage: fluid(maxWidth: 1900) {
+            ...GatsbySanityImageFluid
+          }
+        }
+        alt
+      }
       _rawBody(resolveReferences: {maxDepth: 5})
     }
   }
