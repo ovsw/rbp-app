@@ -69,17 +69,7 @@ export const query = graphql`
       }
       section
       headerImage {
-        asset {
-          mobileImage: fluid(maxWidth: 400) {
-            ...GatsbySanityImageFluid
-          }
-          tabletImage: fluid(maxWidth: 700) {
-            ...GatsbySanityImageFluid
-          }
-          desktopImage: fluid(maxWidth: 1900) {
-            ...GatsbySanityImageFluid
-          }
-        }
+        ...SanityImageMeta
         alt
       }
       _rawBody(resolveReferences: {maxDepth: 5})

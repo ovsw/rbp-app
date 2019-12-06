@@ -744,7 +744,7 @@ export default {
         background: `url(${SectionBorderTop}) repeat-x top center`,
         content: '""',
         position: 'absolute',
-        top: '-40px',
+        top: '-42px',
         left: 0,
         right: 0,
         height: '43px'
