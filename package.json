@@ -18,5 +18,7 @@
     "@sanity/cli": "^0.140.17",
     "lerna": "^3.13.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "gatsby-cli": "^2.8.16"
+  }
 }
