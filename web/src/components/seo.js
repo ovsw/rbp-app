@@ -4,6 +4,7 @@ import Helmet from 'react-helmet'
 import {StaticQuery, graphql} from 'gatsby'
 import {imageUrlFor} from '../lib/image-url'
 import {buildImageObj} from '../lib/helpers'
+// import config from '../../config/website'
 
 function SEO ({description, lang, meta, keywords, title, image}) {
   return (
