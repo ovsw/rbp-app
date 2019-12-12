@@ -6,7 +6,7 @@ import {Flex, Box} from '@theme-ui/components'
 import {Link, useStaticQuery, graphql} from 'gatsby'
 import Img from 'gatsby-image'
 
-import {FaMap, FaPhone} from 'react-icons/fa'
+import {FaBus} from 'react-icons/fa'
 
 // containers
 import SectionWithSidebar from '../../containers/section-with-sidebar'
@@ -15,15 +15,17 @@ const TransportationSection = () => {
   return (
     <section sx={{variant: 'sections.hpSectionLight'}}>
       <SectionWithSidebar mainContent={<MainContent />} sidebar={<Sidebar />} />
-      <Container sx={{maxWidth: '6xl'}}>
+      <Container sx={{maxWidth: '6xl', pt: [4, 4, 0]}}>
         <Styled.h1 as='h3' sx={{fontWeight: 'normal', mb: 4}}>Transporation Areas</Styled.h1>
         <Flex sx={{
           flexWrap: 'wrap',
           'div': {
-
             pr: 4,
-            width: ['full', 'full', '1/2', '1/5'],
-            'p': {
+            mb: [4, 4, 0],
+            width: ['full', '1/3', '1/5'],
+            'ul': {
+              variant: 'lists.reset',
+              mt: 3,
               ml: 1,
               borderLeft: '2px solid',
               borderColor: 'accent',
@@ -37,27 +39,59 @@ const TransportationSection = () => {
 
           <Box>
             <Styled.h4>Mercer County:</Styled.h4>
-            <p>Ewing, Hamilton, Hopewell, Lawrenceville, Pennington, Princeton, Robbinsville, Titusville</p>
+            <ul>
+              <li>Ewing,</li>
+              <li>Hamilton,</li>
+              <li>Hopewell,</li>
+              <li>Lawrenceville,</li>
+              <li>Pennington,</li>
+              <li>Princeton,</li>
+              <li>Robbinsville,</li>
+              <li>Titusville.</li>
+            </ul>
           </Box>
 
           <Box>
             <Styled.h4>Somerset County:</Styled.h4>
-            <p> Belle Mead, Hillsborough, Neshanic, Rocky Hill, Skillman</p>
+            <ul>
+              <li>Belle Mead,</li>
+              <li>Hillsborough,</li>
+              <li>Neshanic,</li>
+              <li>Rocky Hill,</li>
+              <li>Skillman.</li>
+            </ul>
+
           </Box>
 
           <Box>
             <Styled.h4>Hunterdon County: </Styled.h4>
-            <p> East Amwell, Flemington, Lambertville, Sergeantville, Stockton, West Amwell</p>
+            <ul>
+              <li>East Amwell,</li>
+              <li>Flemington,</li>
+              <li>Lambertville,</li>
+              <li>Sergeantville,</li>
+              <li>Stockton,</li>
+              <li>West Amwell.</li>
+            </ul>
           </Box>
 
           <Box>
             <Styled.h4>Bucks County: </Styled.h4>
-            <p> New Hope, Newtown, Washington Crossing,Yardley</p>
+            <ul>
+              <li>New Hope,</li>
+              <li>Newtown,</li>
+              <li>Washington Crossing,</li>
+              <li>Yardley.</li>
+            </ul>
           </Box>
 
           <Box>
             <Styled.h4>Middlesex County:</Styled.h4>
-            <p>Kendall Park, Plainsboro, South Brunswick</p>
+            <ul>
+              <li>Kendall Park,</li>
+              <li>Plainsboro,</li>
+              <li>South Brunswick.</li>
+            </ul>
           </Box>
         </Flex>
       </Container>
@@ -81,7 +115,7 @@ const MainContent = () => {
   )
   return (
     <>
-      <Img fluid={transportationImage.childImageSharp.fluid} />
+      <Img fluid={transportationImage.childImageSharp.fluid} sx={{maxWidth: '650px', ml: [0, 0, 4]}} />
     </>
   )
 }
@@ -94,9 +128,9 @@ const Sidebar = () => {
       <p>Transportation is provided using air-conditioned, 24 passenger mini-buses.</p>
       <p>All buses are professionally driven and have seatbelts. There is a bus aid on each bus. Transportation is included in the camp tuition.</p>
       <Link to='/transportation/' sx={{variant: 'buttons.3D', display: 'inline-block', my: 3, mr: 3, position: 'relative', pl: '3.5rem'}}>
-        <FaMap sx={{position: 'absolute', top: '0.7rem', left: '1rem', fontSize: 4}} /> Read More
+        <FaBus sx={{position: 'absolute', top: '0.7rem', left: '1rem', fontSize: 4}} /> Read More
       </Link>
-      <a href='tel:6094661212' sx={{variant: 'buttons.3DAccent', display: 'inline-block'}}><FaPhone /> Call Us: (609) 466-1212</a>
+      {/* <a href='tel:6094661212' sx={{variant: 'buttons.3DAccent', display: 'inline-block'}}><FaPhone /> Call Us: (609) 466-1212</a> */}
     </div>
   )
 }
