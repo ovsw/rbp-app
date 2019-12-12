@@ -7,7 +7,7 @@ import HeroVideoBg from './hero-video-bg'
 import {FaPhone} from 'react-icons/fa'
 
 import VideoPoster from '../../images/rambling-pines-camp-intro-video.jpg'
-import BigLogo from '../../images/rambling-pines-art-logo-test-4.png'
+import BigLogo from '../../images/rambling-pines-art-logo.png'
 
 const Hero = () => {
   return (
