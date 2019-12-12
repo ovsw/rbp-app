@@ -264,6 +264,22 @@ module.exports = {
         watchMode: true,
         overlayDrafts: true
       }
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.ramblingpines.com',
+        sitemap: 'https://www.ramblingpines.com/sitemap.xml',
+        resolveEnv: () => process.env.GATSBY_ENV,
+        env: {
+          development: {
+            policy: [{userAgent: '*', disallow: ['/']}]
+          },
+          production: {
+            policy: [{userAgent: '*', disallow: '/'}]
+          }
+        }
+      }
     }
   ]
 }
