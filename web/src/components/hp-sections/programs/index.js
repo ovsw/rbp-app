@@ -73,8 +73,8 @@ const MainContent = () => {
   return (
     <Flex sx={{pl: [0, 0, 4], flexWrap: 'wrap'}}>
       {programs.map(program => (
-        <Box sx={{width: ['full', 'full', '1/2'], display: 'flex'}}>
-          <ProgramItem key={program.name} {...program} />
+        <Box key={program.name} sx={{width: ['full', 'full', '1/2'], display: 'flex'}}>
+          <ProgramItem {...program} />
         </Box>
       ))}
     </Flex>
