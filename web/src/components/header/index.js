@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React from 'react' // eslint-disable-line
+import React, {useContext} from 'react' // eslint-disable-line
 import {Header as ThemeHeader, Container, jsx} from 'theme-ui'
 import {Box, Flex} from '@theme-ui/components'
 
@@ -9,11 +9,16 @@ import {useSiteMetadata} from '../../hooks/use-site-metadata'
 import Icon from '../icon'
 import TopBar from './top-bar'
 import MainNav from './main-nav'
+import Announcement from './announcement'
+
+import {AlertContext} from '../../contexts/alertContext'
 
 import headerBgImage from '../../images/white-paper-bg2.jpg'
 
 const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => {
   const {siteNav} = useSiteMetadata()
+  const {showAlert, closeAlert} = useContext(AlertContext)
+
   return (
     <ThemeHeader sx={{
       background: `url(${headerBgImage}) repeat bottom left`,
@@ -23,6 +28,7 @@ const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => {
       zIndex: 9999,
       boxShadow: '0 3px 12px rgba(0,0,0,0.3)'
     }}>
+      {showAlert && <Announcement closeAlert={closeAlert} />}
       <Container className='HeaderContainer' sx={{pt: 3, pb: 0}}>
         <TopBar />
         <Flex sx={{position: ['static', 'relative'], justifyContent: 'space-between'}} className='MainNav'>

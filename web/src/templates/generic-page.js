@@ -3,7 +3,6 @@ import {graphql} from 'gatsby'
 import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
-import Layout from '../containers/layout'
 import GenericPage from '../components/generic-page'
 
 // import {toPlainText} from '../lib/helpers'
@@ -14,7 +13,7 @@ const GenericPageTemplate = props => {
   const section = data && (data.page.section || 'Future Families')
 
   return (
-    <Layout>
+    <>
       {errors && <SEO seoTitle='GraphQL Error' />}
       {page && <SEO seoTitle={page.seoTitle || page.title || 'Untitled'} description={page.seoDescription || ''} />}
 
@@ -24,7 +23,7 @@ const GenericPageTemplate = props => {
         </Container>
       )}
       <GenericPage {...page} section={section} />
-    </Layout>
+    </>
   )
 }
 
