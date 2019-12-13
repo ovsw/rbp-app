@@ -666,24 +666,26 @@ export default {
       }
     },
     'navSub': {
-      color: 'light',
+      color: 'primaryDark',
       textDecoration: 'none',
       textTransform: 'uppercase',
       fontSize: '1',
+      fontWeight: 'bold',
       letterSpacing: '0.01rem',
       '&:hover': {
-        color: 'accent',
+        color: 'primary',
         textDecoration: 'underline'
       }
     },
     'navSub2': {
-      color: 'gray.3',
+      color: 'primaryDark',
       textDecoration: 'none',
       textTransform: 'uppercase',
       fontSize: '1',
       fontWeight: 'bold',
       '&:hover': {
-        color: 'accent'
+        color: 'primary',
+        textDecoration: 'underline'
       }
     },
     'sidebarNav': {
