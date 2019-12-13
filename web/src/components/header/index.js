@@ -13,7 +13,7 @@ import Announcement from './announcement'
 
 import {AlertContext} from '../../contexts/alertContext'
 
-import headerBgImage from '../../images/white-paper-bg2.jpg'
+import headerBgImage from '../../images/yellow-paper-bg.jpg'
 
 const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => {
   const {siteNav} = useSiteMetadata()
