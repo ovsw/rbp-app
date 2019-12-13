@@ -126,7 +126,8 @@ const TestimonialsSection = () => {
       variant: 'sections.hpSection',
       py: [5, 5, 5, 6],
       pb: [6, 5, 5, 6],
-      background: `url(${SectionBg}) repeat-x bottom left`,
+      background: `url(${SectionBg}) no-repeat bottom left`,
+      backgroundSize: 'cover',
       marginBottom: '-3rem',
       position: 'relative',
       zIndex: '2'
