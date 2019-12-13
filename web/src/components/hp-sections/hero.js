@@ -16,7 +16,7 @@ const Hero = () => {
       borderBottom: '1px solid lightgrey',
       position: 'relative',
       zIndex: '1',
-      // bg: 'gray.2',
+      bg: 'primaryLight',
       backgroundImage: `url('${VideoPoster}')`,
       backgroundSize: 'cover',
       backgroundPosition: 'top right',
