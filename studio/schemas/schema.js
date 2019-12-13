@@ -20,6 +20,7 @@ import authorReference from './objects/authorReference'
 import youtube from './objects/youtube'
 import mytable from './objects/myTable'
 import iframeEmbed from './objects/iframeEmbed'
+import hubSpotFormEmbed from './objects/hubSpotFormEmbed'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -42,6 +43,7 @@ export default createSchema({
     excerptPortableText,
     youtube,
     iframeEmbed,
+    hubSpotFormEmbed,
     mytable
 
     // When added to this list, object types can be used as

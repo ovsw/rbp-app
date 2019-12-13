@@ -57,6 +57,9 @@ export default {
     },
     {
       type: 'iframeEmbed'
+    },
+    {
+      type: 'hubSpotFormEmbed'
     }
   ]
 }

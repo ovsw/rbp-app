@@ -4,6 +4,7 @@ import getYouTubeId from 'get-youtube-id'
 import YouTube from 'react-youtube'
 import Table from './Table'
 import Embed from './Embed'
+import HubSpotForm from './HubSpotForm'
 
 const YTopts = {
   width: '100%',
@@ -23,7 +24,8 @@ const serializers = {
       return (<YouTube videoId={id} opts={YTopts} />)
     },
     mytable: Table,
-    iframeEmbed: Embed
+    iframeEmbed: Embed,
+    hubSpotFormEmbed: HubSpotForm
   }
 }
 
