@@ -77,7 +77,7 @@ const MainNav = ({navStructure, showNav}) => {
                       width: '100%',
                       left: '100px',
                       marginLeft: '-100px',
-                      top: '-45px',
+                      top: '-48px',
                       textAlign: 'center'}}>
                       <img src={LogoImage} sx={{
                         width: '150px'
