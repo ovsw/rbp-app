@@ -4,7 +4,7 @@ import {jsx, Styled} from 'theme-ui'
 import {Link, useStaticQuery, graphql} from 'gatsby'
 import Img from 'gatsby-image'
 
-import {FaHamburger, FaPhone} from 'react-icons/fa'
+import {FaHamburger, FaPaperPlane} from 'react-icons/fa'
 
 // containers
 import SectionWithSidebar from '../../containers/section-with-sidebar'
@@ -49,7 +49,7 @@ const Sidebar = () => {
       <Link to='/' sx={{variant: 'buttons.3D', display: 'inline-block', my: 3, mr: 3, position: 'relative', pl: '3.5rem'}}>
         <FaHamburger sx={{position: 'absolute', top: '0.7rem', left: '1rem', fontSize: 4}} /> Sample Lunch Menu
       </Link>
-      <a href='tel:6094661212' sx={{variant: 'buttons.3DAccent', display: 'inline-block'}}><FaPhone /> Call Us: (609) 466-1212</a>
+      <Link to='/request-info/' sx={{variant: 'buttons.3DAccent', display: 'inline-block'}}><FaPaperPlane /> Request Info</Link>
     </div>
   )
 }

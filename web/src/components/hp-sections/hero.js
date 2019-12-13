@@ -1,10 +1,11 @@
 /** @jsx jsx */
 import React from 'react' // eslint-disable-line
+import {Link} from 'gatsby'
 import {Container, jsx, Styled} from 'theme-ui'
-import {Box, Flex} from '@theme-ui/components'
+import {Box} from '@theme-ui/components'
 import HeroVideoBg from './hero-video-bg'
 
-import {FaPhone} from 'react-icons/fa'
+import {FaPaperPlane} from 'react-icons/fa'
 
 import VideoPoster from '../../images/rambling-pines-camp-intro-video.jpg'
 import BigLogo from '../../images/rambling-pines-art-logo.png'
@@ -69,15 +70,15 @@ const Hero = () => {
           fontWeight: 'light',
           mt: 0
         }}>Your kids deserve the best. The best supervision, the best activities, the best friends, the best memories. </p>
-        <a href='tel:6096225658' sx={{
+        <Link to='/request-info/' sx={{
           variant: 'buttons.3DAccent',
           display: 'inline-block',
           py: 3,
           mt: 4
         }}>
-          <FaPhone sx={{position: 'relative', top: '2px'}} />
-          Call us: (609) 622-5658
-        </a>
+          <FaPaperPlane sx={{position: 'relative', top: '2px'}} />{' '}
+          Request Info
+        </Link>
       </Container>
     </Box>
   )
