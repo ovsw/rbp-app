@@ -20,6 +20,12 @@ const Announcement = ({closeAlert}) => {
           '100%': {
             transform: 'translate(-100%,0)'
           }
+        },
+        '&:hover p': {
+          '-webkit-animation-play-state': 'paused',
+          '-moz-animation-play-state': 'paused',
+          '-o-animation-play-state': 'paused',
+          'animation-play-state': 'paused'
         }
       }}>
         <p sx={{margin: 0, display: 'inline-block', pl: '100%', animation: 'marquee 10s linear infinite'}}>This is a text announcement. This text can be anything, and even contain <a href='https://www.ramblingpines.com/'>links</a></p>
