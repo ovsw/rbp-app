@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React, {useContext} from 'react' // eslint-disable-line
+import React, { useContext } from 'react' // eslint-disable-line
 import {Header as ThemeHeader, Container, jsx} from 'theme-ui'
 import {Box, Flex} from '@theme-ui/components'
 
@@ -13,7 +13,7 @@ import Announcement from './announcement'
 
 import {AlertContext} from '../../contexts/alertContext'
 
-import headerBgImage from '../../images/yellow-paper-bg.jpg'
+import headerBgImage from '../../images/white-paper-bg3.jpg'
 
 const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => {
   const {siteNav} = useSiteMetadata()
@@ -36,7 +36,7 @@ const Header = ({onHideNav, onShowNav, showNav, siteTitle}) => {
             <Link to='/' sx={{variant: 'links.logoText'}}>Rambling Pines<br />Day Camp</Link>
           </Box>
 
-          <button sx={{variant: 'buttons.navToggle'}}onClick={showNav ? onHideNav : onShowNav}>
+          <button sx={{variant: 'buttons.navToggle'}} onClick={showNav ? onHideNav : onShowNav}>
             <Icon symbol='hamburger' />
           </button>
 
