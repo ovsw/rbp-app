@@ -24,12 +24,20 @@ const TransportationSection = () => {
             mb: [4, 4, 0],
             width: ['full', '1/3', '1/5'],
             'ul': {
-              variant: 'lists.reset',
+              color: 'gray.3',
               mt: 3,
-              ml: 1,
+              ml: '0',
               borderLeft: '2px solid',
               borderColor: 'accent',
-              pl: 3
+              pl: '20px'
+            },
+            'li': {
+              ml: 2,
+              mb: 2,
+              'span': {
+                color: 'text',
+                lineHeight: '0.3'
+              }
             },
             'h4': {
               fontWeight: 'normal'
@@ -40,25 +48,25 @@ const TransportationSection = () => {
           <Box>
             <Styled.h4>Mercer County:</Styled.h4>
             <ul>
-              <li>Ewing,</li>
-              <li>Hamilton,</li>
-              <li>Hopewell,</li>
-              <li>Lawrenceville,</li>
-              <li>Pennington,</li>
-              <li>Princeton,</li>
-              <li>Robbinsville,</li>
-              <li>Titusville.</li>
+              <li><span>Ewing</span></li>
+              <li><span>Hamilton</span></li>
+              <li><span>Hopewell</span></li>
+              <li><span>Lawrenceville</span></li>
+              <li><span>Pennington</span></li>
+              <li><span>Princeton</span></li>
+              <li><span>Robbinsville</span></li>
+              <li><span>Titusville.</span></li>
             </ul>
           </Box>
 
           <Box>
             <Styled.h4>Somerset County:</Styled.h4>
             <ul>
-              <li>Belle Mead,</li>
-              <li>Hillsborough,</li>
-              <li>Neshanic,</li>
-              <li>Rocky Hill,</li>
-              <li>Skillman.</li>
+              <li><span>Belle Mead</span></li>
+              <li><span>Hillsborough</span></li>
+              <li><span>Neshanic</span></li>
+              <li><span>Rocky Hill</span></li>
+              <li><span>Skillman.</span></li>
             </ul>
 
           </Box>
@@ -66,31 +74,31 @@ const TransportationSection = () => {
           <Box>
             <Styled.h4>Hunterdon County: </Styled.h4>
             <ul>
-              <li>East Amwell,</li>
-              <li>Flemington,</li>
-              <li>Lambertville,</li>
-              <li>Sergeantville,</li>
-              <li>Stockton,</li>
-              <li>West Amwell.</li>
+              <li><span>East Amwell</span></li>
+              <li><span>Flemington</span></li>
+              <li><span>Lambertville</span></li>
+              <li><span>Sergeantville</span></li>
+              <li><span>Stockton</span></li>
+              <li><span>West Amwell.</span></li>
             </ul>
           </Box>
 
           <Box>
             <Styled.h4>Bucks County: </Styled.h4>
             <ul>
-              <li>New Hope,</li>
-              <li>Newtown,</li>
-              <li>Washington Crossing,</li>
-              <li>Yardley.</li>
+              <li><span>New Hope</span></li>
+              <li><span>Newtown</span></li>
+              <li><span>Washington Crossing</span></li>
+              <li><span>Yardley.</span></li>
             </ul>
           </Box>
 
           <Box>
             <Styled.h4>Middlesex County:</Styled.h4>
             <ul>
-              <li>Kendall Park,</li>
-              <li>Plainsboro,</li>
-              <li>South Brunswick.</li>
+              <li><span>Kendall Park</span></li>
+              <li><span>Plainsboro</span></li>
+              <li><span>South Brunswick.</span></li>
             </ul>
           </Box>
         </Flex>
